@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a843203b-af25-4fdf-8ed1-8701d1a50426" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/fertilizer_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/flower_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_instance_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_type_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/humidity_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/light_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/location_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/note_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/plant_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/soil_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/toxicity_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/water_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plantjournal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/views.py" afterDir="false" />
     </list>
@@ -33,34 +20,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
+        <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+            <state relative-caret-position="201">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
+        <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+            <state relative-caret-position="368">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +78,7 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_list.html" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/urls.py" />
         <option value="$PROJECT_DIR$/plantjournal/views.py" />
+        <option value="$PROJECT_DIR$/plantjournal/urls.py" />
       </list>
     </option>
   </component>
@@ -137,12 +116,6 @@
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -161,6 +134,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\plantjournal" />
       <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\templates\plantjournal" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -245,12 +219,12 @@
       <workItem from="1555220025657" duration="69000" />
       <workItem from="1555540110560" duration="684000" />
       <workItem from="1555557485708" duration="4402000" />
-      <workItem from="1555637651679" duration="10914000" />
+      <workItem from="1555637651679" duration="12639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17059000" />
+    <option name="totallyTimeSpent" value="18784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="868" y="13" width="1043" height="1034" extended-state="0" />
@@ -422,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -432,10 +406,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+        <state relative-caret-position="368">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

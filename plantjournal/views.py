@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.template import loader
+from django.views import View
 
 from .models import (
     Light,
@@ -18,121 +19,121 @@ from .models import (
 )
 
 
-def light_list_view(request):
-    light_list = Light.objects.all()
-    # light_list = Light.objects.none()
-    template = loader.get_template(
-        'plantjournal/light_list.html')
-    context = {'light_list': light_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class LightList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/light_list.html',
+            {'light_list': Light.objects.all()}
+        )
 
 
-def soil_list_view(request):
-    soil_list = Soil.objects.all()
-    # soil_list = Soil.objects.none()
-    template = loader.get_template(
-        'plantjournal/soil_list.html')
-    context = {'soil_list': soil_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class SoilList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/soil_list.html',
+            {'soil_list': Soil.objects.all()}
+        )
 
 
-def humidity_list_view(request):
-    humidity_list = Humidity.objects.all()
-    # humidity_list = Humidity.objects.none()
-    template = loader.get_template(
-        'plantjournal/humidity_list.html')
-    context = {'humidity_list': humidity_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class HumidityList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/humidity_list.html',
+            {'humidity_list': Humidity.objects.all()}
+        )
 
 
-def water_list_view(request):
-    water_list = Water.objects.all()
-    # water_list = Water.objects.none()
-    template = loader.get_template(
-        'plantjournal/water_list.html')
-    context = {'water_list': water_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class WaterList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/water_list.html',
+            {'water_list': Water.objects.all()}
+        )
 
 
-def fertilizer_list_view(request):
-    fertilizer_list = Fertilizer.objects.all()
-    # fertilizer_list = Fertilizer.objects.none()
-    template = loader.get_template(
-        'plantjournal/fertilizer_list.html')
-    context = {'fertilizer_list': fertilizer_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class FertilizerList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/fertilizer_list.html',
+            {'fertilizer_list': Fertilizer.objects.all()}
+        )
 
 
-def toxicity_list_view(request):
-    toxicity_list = Toxicity.objects.all()
-    # toxicity_list = Toxicity.objects.none()
-    template = loader.get_template(
-        'plantjournal/toxicity_list.html')
-    context = {'toxicity_list': toxicity_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class ToxicityList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/toxicity_list.html',
+            {'toxicity_list': Toxicity.objects.all()}
+        )
 
 
-def location_list_view(request):
-    location_list = Location.objects.all()
-    # location_list = Location.objects.none()
-    template = loader.get_template(
-        'plantjournal/location_list.html')
-    context = {'location_list': location_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class LocationList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/location_list.html',
+            {'location_list': Location.objects.all()}
+        )
 
 
-def flower_list_view(request):
-    flower_list = Flower.objects.all()
-    # flower_list = Flower.objects.none()
-    template = loader.get_template(
-        'plantjournal/flower_list.html')
-    context = {'flower_list': flower_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class FlowerList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/flower_list.html',
+            {'flower_list': Flower.objects.all()}
+        )
 
 
-def plant_list_view(request):
-    plant_list = Plant.objects.all()
-    # plant_list = Plant.objects.none()
-    template = loader.get_template(
-        'plantjournal/plant_list.html')
-    context = {'plant_list': plant_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class PlantList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/plant_list.html',
+            {'plant_list': Plant.objects.all()}
+        )
 
 
-def note_list_view(request):
-    note_list = Note.objects.all()
-    # note_list = Note.objects.none()
-    template = loader.get_template(
-        'plantjournal/note_list.html')
-    context = {'note_list': note_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class NoteList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/note_list.html',
+            {'note_list': Note.objects.all()}
+        )
 
 
-def growth_type_list_view(request):
-    growth_type_list = GrowthType.objects.all()
-    # growth_type_list = GrowthType.objects.none()
-    template = loader.get_template(
-        'plantjournal/growth_type_list.html')
-    context = {'growth_type_list': growth_type_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class GrowthTypeList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/growth_type_list.html',
+            {'growth_type_list': GrowthType.objects.all()}
+        )
 
 
-def growth_instance_list_view(request):
-    growth_instance_list = GrowthInstance.objects.all()
-    # growth_instance_list = GrowthInstance.objects.none()
-    template = loader.get_template(
-        'plantjournal/growth_instance_list.html')
-    context = {'growth_instance_list': growth_instance_list}
-    output = template.render(context)
-    return HttpResponse(output)
+class GrowthInstanceList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/growth_instance_list.html',
+            {'growth_instance_list': GrowthInstance.objects.all()}
+        )
