@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a843203b-af25-4fdf-8ed1-8701d1a50426" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0002_auto_20190418_2147.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0003_auto_20190418_2154.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0004_auto_20190418_2205.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0005_auto_20190418_2234.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0006_auto_20190418_2237.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantjournal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="363">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -41,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="408">
+              <caret line="177" column="76" selection-start-line="177" selection-start-column="76" selection-end-line="177" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plantjournal/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -72,9 +76,9 @@
       <list>
         <option value="$PROJECT_DIR$/johnson_eric_final_project/urls.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/plantjournal/admin.py" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/settings.py" />
         <option value="$PROJECT_DIR$/plantjournal/models.py" />
-        <option value="$PROJECT_DIR$/plantjournal/admin.py" />
       </list>
     </option>
   </component>
@@ -205,20 +209,20 @@
       <workItem from="1555219019347" duration="990000" />
       <workItem from="1555220025657" duration="69000" />
       <workItem from="1555540110560" duration="684000" />
-      <workItem from="1555557485708" duration="4325000" />
+      <workItem from="1555557485708" duration="4402000" />
+      <workItem from="1555637651679" duration="6171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6068000" />
+    <option name="totallyTimeSpent" value="12316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="868" y="13" width="1043" height="1034" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22075279" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22482197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="manage.py@johnson_eric_final_project" visible="true" weight="0.32915717" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32915717" />
@@ -233,6 +237,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info active="true" anchor="bottom" id="manage.py@johnson_eric_final_project" order="14" visible="true" weight="0.32915717" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -251,24 +256,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -280,20 +269,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
+    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="177" column="76" selection-start-line="177" selection-start-column="76" selection-end-line="177" selection-end-column="76" />
         </state>
       </provider>
     </entry>
