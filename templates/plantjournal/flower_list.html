@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Flower List
+{% endblock %}
+
+{% block content %}
+    <h2>Flower List</h2>
+    <ul>
+        {% for flower in flower_list %}
+            <li>
+                <a href="">{{ flower }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no flowers available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

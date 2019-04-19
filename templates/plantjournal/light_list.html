@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Light Type List
+{% endblock %}
+
+{% block content %}
+    <h2>Light Type List</h2>
+    <ul>
+        {% for light in light_list %}
+            <li>
+                <a href="">{{ light }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no light types available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

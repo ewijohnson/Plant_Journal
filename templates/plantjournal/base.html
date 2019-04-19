@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            title is provided by inheriting templates
+        {% endblock %}
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if IE]><script
+      src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script><![endif]-->
+</head>
+
+<body>
+
+<div><!-- start of container -->
+    <header>
+        <h1>Plant Journal</h1>
+        <h2>Plant Information Catalog</h2>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="">
+                    Light Types</a></li>
+            <li>
+                <a href="">
+                    Soil Types</a></li>
+            <li>
+                <a href="">
+                    Humidity Levels</a></li>
+            <li>
+                <a href="">
+                    Watering Times</a></li>
+            <li>
+                <a href="">
+                    Fertilizer Schedules</a></li>
+            <li>
+                <a href="">
+                    Toxicities</a></li>
+            <li>
+                <a href="">
+                    Locations</a></li>
+            <li>
+                <a href="">
+                    Flowers</a></li>
+            <li>
+                <a href="">
+                    Plants</a></li>
+            <li>
+                <a href="">
+                    Notes</a></li>
+            <li>
+                <a href="">
+                    Growth Types</a></li>
+            <li>
+                <a href="">
+                    Growth Instances</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+            This is default content!
+        {% endblock %}
+    </main>
+</div><!-- end of container -->
+
+<footer>
+    <p>
+        <a>Copyright 2019, E.W.I. Johnson </a>
+    </p>
+</footer>
+
+</body>
+</html>
+

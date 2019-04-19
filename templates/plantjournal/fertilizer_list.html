@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Fertilizer Schedule List
+{% endblock %}
+
+{% block content %}
+    <h2>Fertilizer Schedule List</h2>
+    <ul>
+        {% for fertilizer in fertilizer_list %}
+            <li>
+                <a href="">{{ fertilizer }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no fertilizer schedules available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Location List
+{% endblock %}
+
+{% block content %}
+    <h2>Location List</h2>
+    <ul>
+        {% for location in location_list %}
+            <li>
+                <a href="">{{ location }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no locations available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

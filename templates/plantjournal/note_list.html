@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Note List
+{% endblock %}
+
+{% block content %}
+    <h2>Note List</h2>
+    <ul>
+        {% for note in note_list %}
+            <li>
+                <a href="">{{ note }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no notes available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

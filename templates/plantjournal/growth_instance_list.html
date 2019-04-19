@@ -1,0 +1,18 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Growth Instance List
+{% endblock %}
+
+{% block content %}
+    <h2>Growth Instance List</h2>
+    <ul>
+        {% for growth_instance in growth_instance_list %}
+            <li>
+                <a href="">{{ growth_instance }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no growth instances available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
