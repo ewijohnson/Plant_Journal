@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a843203b-af25-4fdf-8ed1-8701d1a50426" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plantjournal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/fertilizer_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/flower_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_type_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/humidity_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/light_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/location_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/note_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/soil_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/toxicity_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plantjournal/water_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantjournal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantjournal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantjournal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plantjournal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/plantjournal/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/plantjournal/water_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/water_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="473">
+              <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -32,14 +48,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="167">
+              <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -60,14 +85,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/plantjournal/admin.py" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/settings.py" />
-        <option value="$PROJECT_DIR$/plantjournal/models.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/light_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/soil_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/humidity_list.html" />
-        <option value="$PROJECT_DIR$/templates/plantjournal/water_list.html" />
-        <option value="$PROJECT_DIR$/templates/plantjournal/base.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/toxicity_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/fertilizer_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/location_list.html" />
@@ -77,8 +98,24 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_type_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_list.html" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/urls.py" />
-        <option value="$PROJECT_DIR$/plantjournal/views.py" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/light_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/soil_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/humidity_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/water_list.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/water_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/fertilizer_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/toxicity_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/location_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/flower_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/base.html" />
+        <option value="$PROJECT_DIR$/plantjournal/models.py" />
+        <option value="$PROJECT_DIR$/plantjournal/admin.py" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/note_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/growth_type_detail.html" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html" />
         <option value="$PROJECT_DIR$/plantjournal/urls.py" />
+        <option value="$PROJECT_DIR$/plantjournal/views.py" />
       </list>
     </option>
   </component>
@@ -94,6 +131,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,29 +155,33 @@
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../johnson_eric_final_project_draft1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../johnson_eric_ez_university" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\plantjournal" />
-      <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\templates\plantjournal" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\templates\plantjournal" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\templates\plantjournal" />
+      <recent name="C:\Python Projects\IS590WFO\plantjournal_final_project\johnson_eric_final_project\plantjournal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,18 +262,19 @@
       <workItem from="1555220025657" duration="69000" />
       <workItem from="1555540110560" duration="684000" />
       <workItem from="1555557485708" duration="4402000" />
-      <workItem from="1555637651679" duration="12639000" />
+      <workItem from="1555637651679" duration="12701000" />
+      <workItem from="1555951694931" duration="6036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18784000" />
+    <option name="totallyTimeSpent" value="24882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="868" y="13" width="1043" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22482197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22889115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -266,9 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -283,23 +324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="177" column="76" selection-start-line="177" selection-start-column="76" selection-end-line="177" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -321,20 +345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/water_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -404,22 +414,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/light_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/soil_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/humidity_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/water_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/water_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/fertilizer_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/toxicity_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/location_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/flower_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_type_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/note_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/plant_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="473">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http.response import HttpResponse
 from django.template import loader
 from django.views import View
@@ -29,6 +29,20 @@ class LightList(View):
         )
 
 
+class LightDetail(View):
+
+    def get(self, request, pk):
+        light = get_object_or_404(
+            Light,
+            pk=pk
+        )
+        plant_list = light.plants.all()
+        return render_to_response(
+            'plantjournal/light_detail.html',
+            {'light': light, 'plant_list': plant_list}
+        )
+
+
 class SoilList(View):
 
     def get(self, request):
@@ -36,6 +50,20 @@ class SoilList(View):
             request,
             'plantjournal/soil_list.html',
             {'soil_list': Soil.objects.all()}
+        )
+
+
+class SoilDetail(View):
+
+    def get(self, request, pk):
+        soil = get_object_or_404(
+            Soil,
+            pk=pk
+        )
+        plant_list = soil.plants.all()
+        return render_to_response(
+            'plantjournal/soil_detail.html',
+            {'soil': soil, 'plant_list': plant_list}
         )
 
 
@@ -49,6 +77,20 @@ class HumidityList(View):
         )
 
 
+class HumidityDetail(View):
+
+    def get(self, request, pk):
+        humidity = get_object_or_404(
+            Humidity,
+            pk=pk
+        )
+        plant_list = humidity.plants.all()
+        return render_to_response(
+            'plantjournal/humidity_detail.html',
+            {'humidity': humidity, 'plant_list': plant_list}
+        )
+
+
 class WaterList(View):
 
     def get(self, request):
@@ -56,6 +98,20 @@ class WaterList(View):
             request,
             'plantjournal/water_list.html',
             {'water_list': Water.objects.all()}
+        )
+
+
+class WaterDetail(View):
+
+    def get(self, request, pk):
+        water = get_object_or_404(
+            Water,
+            pk=pk
+        )
+        plant_list = water.plants.all()
+        return render_to_response(
+            'plantjournal/water_detail.html',
+            {'water': water, 'plant_list': plant_list}
         )
 
 
@@ -69,13 +125,17 @@ class FertilizerList(View):
         )
 
 
-class ToxicityList(View):
+class FertilizerDetail(View):
 
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/toxicity_list.html',
-            {'toxicity_list': Toxicity.objects.all()}
+    def get(self, request, pk):
+        fertilizer = get_object_or_404(
+            Fertilizer,
+            pk=pk
+        )
+        plant_list = fertilizer.plants.all()
+        return render_to_response(
+            'plantjournal/fertilizer_detail.html',
+            {'fertilizer': fertilizer, 'plant_list': plant_list}
         )
 
 
@@ -89,6 +149,44 @@ class LocationList(View):
         )
 
 
+class LocationDetail(View):
+
+    def get(self, request, pk):
+        location = get_object_or_404(
+            Location,
+            pk=pk
+        )
+        plant_list = location.plants.all()
+        return render_to_response(
+            'plantjournal/location_detail.html',
+            {'location': location, 'plant_list': plant_list}
+        )
+
+
+class ToxicityList(View):
+
+    def get(self, request):
+        return render(
+            request,
+            'plantjournal/toxicity_list.html',
+            {'toxicity_list': Toxicity.objects.all()}
+        )
+
+
+class ToxicityDetail(View):
+
+    def get(self, request, pk):
+        toxicity = get_object_or_404(
+            Toxicity,
+            pk=pk
+        )
+        plant_list = toxicity.plants.all()
+        return render_to_response(
+            'plantjournal/toxicity_detail.html',
+            {'toxicity': toxicity, 'plant_list': plant_list}
+        )
+
+
 class FlowerList(View):
 
     def get(self, request):
@@ -96,6 +194,20 @@ class FlowerList(View):
             request,
             'plantjournal/flower_list.html',
             {'flower_list': Flower.objects.all()}
+        )
+
+
+class FlowerDetail(View):
+
+    def get(self, request, pk):
+        flower = get_object_or_404(
+            Flower,
+            pk=pk
+        )
+        plant_list = flower.plants.all()
+        return render_to_response(
+            'plantjournal/flower_detail.html',
+            {'flower': flower, 'plant_list': plant_list}
         )
 
 
@@ -109,6 +221,39 @@ class PlantList(View):
         )
 
 
+class PlantDetail(View):
+
+    def get(self, request, pk):
+        plant = get_object_or_404(
+            Plant,
+            pk=pk
+        )
+        light = plant.light
+        soil = plant.soil
+        humidity = plant.humidity
+        water = plant.water
+        fertilizer = plant.fertilizer
+        location = plant.location
+        toxicity = plant.toxicity
+        flower = plant.flower
+        growth_instance_list = plant.growth_instances.all()
+        note_list = plant.notes.all()
+        return render_to_response(
+            'plantjournal/plant_detail.html',
+            {'plant': plant,
+             'light': light,
+             'soil': soil,
+             'humidity': humidity,
+             'water': water,
+             'fertilizer': fertilizer,
+             'location': location,
+             'toxicity': toxicity,
+             'flower': flower,
+             'growth_instance_list': growth_instance_list,
+             'note_list': note_list}
+        )
+
+
 class NoteList(View):
 
     def get(self, request):
@@ -116,6 +261,20 @@ class NoteList(View):
             request,
             'plantjournal/note_list.html',
             {'note_list': Note.objects.all()}
+        )
+
+
+class NoteDetail(View):
+
+    def get(self, request, pk):
+        note = get_object_or_404(
+            Note,
+            pk=pk
+        )
+        plant = note.plant
+        return render_to_response(
+            'plantjournal/note_detail.html',
+            {'note': note, 'plant': plant}
         )
 
 
@@ -129,6 +288,20 @@ class GrowthTypeList(View):
         )
 
 
+class GrowthTypeDetail(View):
+
+    def get(self, request, pk):
+        growth_type = get_object_or_404(
+            GrowthType,
+            pk=pk
+        )
+        growth_instance_list = growth_type.growth_instances.all()
+        return render_to_response(
+            'plantjournal/growth_type_detail.html',
+            {'growth_type': growth_type, 'growth_instance_list': growth_instance_list}
+        )
+
+
 class GrowthInstanceList(View):
 
     def get(self, request):
@@ -136,4 +309,21 @@ class GrowthInstanceList(View):
             request,
             'plantjournal/growth_instance_list.html',
             {'growth_instance_list': GrowthInstance.objects.all()}
+        )
+
+
+class GrowthInstanceDetail(View):
+
+    def get(self, request, pk):
+        growth_instance = get_object_or_404(
+            GrowthInstance,
+            pk=pk
+        )
+        plant = growth_instance.plant
+        growth_type = growth_instance.growth_type
+        return render_to_response(
+            'plantjournal/growth_instance_detail.html',
+            {'growth_instance': growth_instance,
+             'plant': plant,
+             'growth_type': growth_type}
         )

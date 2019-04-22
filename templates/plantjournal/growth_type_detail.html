@@ -1,0 +1,22 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Growth Type - {{ growth_type }}
+{% endblock %}
+
+{% block content %}
+    <h2>{{ growth_type }}</h2>
+
+    <section>
+        <h3>Growth Instances</h3>
+        <ul>
+            {% for growth_instance in growth_instance_list %}
+                <li>
+                    <a href="">{{ growth_instance }}</a>
+                </li>
+            {% empty %}
+                <li><em>There are currently no instances of this growth type.</em></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

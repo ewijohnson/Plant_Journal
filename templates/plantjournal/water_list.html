@@ -1,18 +1,18 @@
 {% extends 'plantjournal/base.html' %}
 
 {% block title %}
-    Watering Time List
+    Watering Schedule List
 {% endblock %}
 
 {% block content %}
-    <h2>Watering Time List</h2>
+    <h2>Watering Schedule List</h2>
     <ul>
         {% for water in water_list %}
             <li>
                 <a href="">{{ water }}</a>
             </li>
         {% empty %}
-            <li><em>There are currently no watering times available.</em></li>
+            <li><em>There are currently no watering schedules available.</em></li>
         {% endfor %}
     </ul>
 {% endblock %}

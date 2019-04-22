@@ -67,6 +67,17 @@ class Fertilizer(models.Model):
         unique_together = (('fertilizer_freq', 'fertilizer_type'),)
 
 
+class Location(models.Model):
+    location_id = models.AutoField(primary_key=True)
+    location_name = models.CharField(max_length=45, unique=True)
+
+    def __str__(self):
+        return '%s' % self.location_name
+
+    class Meta:
+        ordering = ['location_name']
+
+
 class Toxicity(models.Model):
     toxicity_id = models.AutoField(primary_key=True)
     toxicity_type = models.CharField(max_length=45, unique=True)
@@ -77,17 +88,6 @@ class Toxicity(models.Model):
     class Meta:
         ordering = ['toxicity_type']
         verbose_name_plural = 'toxicities'
-
-
-class Location(models.Model):
-    location_id = models.AutoField(primary_key=True)
-    location_name = models.CharField(max_length=45, unique=True)
-
-    def __str__(self):
-        return '%s' % self.location_name
-
-    class Meta:
-        ordering = ['location_name']
 
 
 class Flower(models.Model):

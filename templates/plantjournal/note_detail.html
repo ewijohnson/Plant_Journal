@@ -1,0 +1,22 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Note - {{ note }}
+{% endblock %}
+
+{% block content %}
+    <h2>{{ note }}</h2>
+
+    <section>
+        <p><em>(This note is associated with the plant:
+            <a href="">{{ note.plant }})</a>
+        </em></p>
+    </section>
+
+    <section>
+        <p>
+            {{ note.note_body }}
+        </p>
+    </section>
+
+{% endblock %}

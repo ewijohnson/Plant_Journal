@@ -1,0 +1,118 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Plant - {{ plant }}
+{% endblock %}
+
+{% block content %}
+    <h2>Plant - {{ plant }}</h2>
+
+    <section>
+        <table>
+            <tr>
+                <th>Light Type:</th>
+                <td>
+                    {% if light != None %}
+                        <a href="">{{ light }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Soil Type:</th>
+                <td>
+                    {% if soil != None %}
+                        <a href="">{{ soil }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Humidity Level:</th>
+                <td>
+                    {% if humidity != None %}
+                        <a href="">{{ humidity }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Watering Schedule:</th>
+                <td>
+                    {% if water != None %}
+                        <a href="">{{ water }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Fertilizer Schedule:</th>
+                <td>
+                    {% if fertilizer != None %}
+                        <a href="">{{ fertilizer }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Location:</th>
+                <td>
+                    {% if location != None %}
+                        <a href="">{{ location }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Toxicity:</th>
+                <td>
+                    {% if toxicity != None %}
+                        <a href="">{{ toxicity }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Flowers:</th>
+                <td>
+                    {% if flower != None %}
+                        <a href="">{{ flower }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h3>Growth Instances</h3>
+        <ul>
+            {% for growth_instance in growth_instance_list %}
+                <li>
+                    <a href="">{{ growth_instance }}</a>
+                </li>
+            {% empty %}
+                <li><em>There are currently no growth instances for this plant.</em></li>
+            {% endfor %}
+        </ul>
+
+        <h3>Notes</h3>
+        <ul>
+            {% for note in note_list %}
+                <li>
+                    <a href="">{{ note }}</a>
+                </li>
+            {% empty %}
+                <li><em>There are currently no notes associated with this plant.</em></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

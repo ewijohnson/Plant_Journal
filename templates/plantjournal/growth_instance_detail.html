@@ -1,0 +1,23 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Growth Instance - {{ growth_instance }}
+{% endblock %}
+
+{% block content %}
+    <h2>{{ growth_instance }}</h2>
+
+    <section>
+        <table>
+            <tr>
+                <th>Plant:</th>
+                <td><a href="">{{ plant }}</a></td>
+            </tr>
+            <tr>
+                <th>Growth Type:</th>
+                <td><a href="">{{ growth_type }}</a></td>
+            </tr>
+        </table>
+    </section>
+
+{% endblock %}

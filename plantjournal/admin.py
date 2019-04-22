@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Light, Soil, Humidity, Water, Fertilizer, Toxicity, Location, Flower, \
+from .models import Light, Soil, Humidity, Water, Fertilizer, Location, Toxicity, Flower, \
     Plant, Note, GrowthType, GrowthInstance
 
 
@@ -8,8 +8,8 @@ admin.site.register(Soil)
 admin.site.register(Humidity)
 admin.site.register(Water)
 admin.site.register(Fertilizer)
-admin.site.register(Toxicity)
 admin.site.register(Location)
+admin.site.register(Toxicity)
 admin.site.register(Flower)
 admin.site.register(Plant)
 admin.site.register(Note)

@@ -1,0 +1,22 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Toxicity - {{ toxicity }}
+{% endblock %}
+
+{% block content %}
+    <h2>Toxicity - {{ toxicity }}</h2>
+
+    <section>
+        <h3>Plants</h3>
+        <ul>
+            {% for plant in plant_list %}
+                <li>
+                    <a href="">{{ plant }}</a>
+                </li>
+            {% empty %}
+                <li><em>There are currently no plants with this toxicity.</em></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
