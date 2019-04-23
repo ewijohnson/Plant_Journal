@@ -9,7 +9,7 @@
     <ul>
         {% for fertilizer in fertilizer_list %}
             <li>
-                <a href="">{{ fertilizer }}</a>
+                <a href="{{ fertilizer.get_absolute_url }}">{{ fertilizer }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no fertilizer schedules available.</em></li>

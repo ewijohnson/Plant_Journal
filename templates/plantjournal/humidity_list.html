@@ -9,7 +9,7 @@
     <ul>
         {% for humidity in humidity_list %}
             <li>
-                <a href="">{{ humidity }}</a>
+                <a href="{{ humidity.get_absolute_url }}">{{ humidity }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no humidity levels available.</em></li>

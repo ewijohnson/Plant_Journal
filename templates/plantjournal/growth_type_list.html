@@ -9,7 +9,7 @@
     <ul>
         {% for growth_type in growth_type_list %}
             <li>
-                <a href="">{{ growth_type }}</a>
+                <a href="{{ growth_type.get_absolute_url }}">{{ growth_type }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no growth types available.</em></li>

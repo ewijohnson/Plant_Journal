@@ -9,7 +9,7 @@
     <ul>
         {% for toxicity in toxicity_list %}
             <li>
-                <a href="">{{ toxicity }}</a>
+                <a href="{{ toxicity.get_absolute_url }}">{{ toxicity }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no toxicities available.</em></li>

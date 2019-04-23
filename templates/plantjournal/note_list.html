@@ -9,7 +9,7 @@
     <ul>
         {% for note in note_list %}
             <li>
-                <a href="">{{ note }}</a>
+                <a href="{{ note.get_absolute_url }}">{{ note }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no notes available.</em></li>

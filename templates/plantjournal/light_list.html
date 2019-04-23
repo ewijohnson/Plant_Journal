@@ -9,7 +9,7 @@
     <ul>
         {% for light in light_list %}
             <li>
-                <a href="">{{ light }}</a>
+                <a href="{{ light.get_absolute_url }}">{{ light }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no light types available.</em></li>

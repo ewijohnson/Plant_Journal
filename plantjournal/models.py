@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Light(models.Model):
@@ -7,6 +8,10 @@ class Light(models.Model):
 
     def __str__(self):
         return '%s' % self.light_type
+
+    def get_absolute_url(self):
+        return reverse('plantjournal_light_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['light_type']
@@ -19,6 +24,10 @@ class Soil(models.Model):
     def __str__(self):
         return '%s' % self.soil_type
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_soil_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['soil_type']
 
@@ -29,6 +38,10 @@ class Humidity(models.Model):
 
     def __str__(self):
         return '%s' % self.humidity_level
+
+    def get_absolute_url(self):
+        return reverse('plantjournal_humidity_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['humidity_level']
@@ -46,6 +59,10 @@ class Water(models.Model):
         else:
             return '%s (%s)' % (self.water_freq, self.water_type)
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_water_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['water_freq', 'water_type']
         unique_together = (('water_freq', 'water_type'),)
@@ -62,6 +79,10 @@ class Fertilizer(models.Model):
         else:
             return '%s (%s)' % (self.fertilizer_freq, self.fertilizer_type)
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_fertilizer_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['fertilizer_freq', 'fertilizer_type']
         unique_together = (('fertilizer_freq', 'fertilizer_type'),)
@@ -74,6 +95,10 @@ class Location(models.Model):
     def __str__(self):
         return '%s' % self.location_name
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_location_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['location_name']
 
@@ -84,6 +109,10 @@ class Toxicity(models.Model):
 
     def __str__(self):
         return '%s' % self.toxicity_type
+
+    def get_absolute_url(self):
+        return reverse('plantjournal_toxicity_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['toxicity_type']
@@ -96,6 +125,10 @@ class Flower(models.Model):
 
     def __str__(self):
         return '%s' % self.flower_type
+
+    def get_absolute_url(self):
+        return reverse('plantjournal_flower_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['flower_type']
@@ -134,6 +167,10 @@ class Plant(models.Model):
             else:
                 return '%s %s (%s)' % (self.plant_name, self.plant_number, self.plant_nickname)
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_plant_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['plant_name', 'plant_number', 'plant_nickname']
         unique_together = (('plant_name', 'plant_number', 'plant_nickname'),)
@@ -149,6 +186,10 @@ class Note(models.Model):
     def __str__(self):
         return '%s - %s' % (self.note_name, self.note_date)
 
+    def get_absolute_url(self):
+        return reverse('plantjournal_note_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['-note_date', 'note_name']
 
@@ -159,6 +200,10 @@ class GrowthType(models.Model):
 
     def __str__(self):
         return '%s' % self.growth_type_name
+
+    def get_absolute_url(self):
+        return reverse('plantjournal_growth_type_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['growth_type_name']
@@ -172,6 +217,10 @@ class GrowthInstance(models.Model):
 
     def __str__(self):
         return '%s - %s (%s)' % (self.plant, self.growth_type, self.growth_instance_date)
+    
+    def get_absolute_url(self):
+        return reverse('plantjournal_growth_instance_detail_urlpattern',
+                       kwargs={'pk': self.pk})
 
     class Meta:
         ordering = ['-growth_instance_date', 'plant', 'growth_type']

@@ -9,7 +9,7 @@
     <ul>
         {% for water in water_list %}
             <li>
-                <a href="">{{ water }}</a>
+                <a href="{{ water.get_absolute_url }}">{{ water }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no watering schedules available.</em></li>

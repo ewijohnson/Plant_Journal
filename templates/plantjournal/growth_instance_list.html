@@ -9,7 +9,7 @@
     <ul>
         {% for growth_instance in growth_instance_list %}
             <li>
-                <a href="">{{ growth_instance }}</a>
+                <a href="{{ growth_instance.get_absolute_url }}">{{ growth_instance }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no growth instances available.</em></li>
