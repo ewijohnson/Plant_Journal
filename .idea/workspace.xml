@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a843203b-af25-4fdf-8ed1-8701d1a50426" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/fertilizer_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/flower_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/growth_type_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/humidity_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/light_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/location_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/note_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/soil_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/toxicity_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plantjournal/water_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/johnson_eric_final_project/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/plantjournal/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/plantjournal/water_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/water_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,34 +22,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
+        <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html">
+        <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/plantjournal/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -75,6 +57,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -97,7 +80,6 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/note_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_type_list.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_list.html" />
-        <option value="$PROJECT_DIR$/johnson_eric_final_project/urls.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/light_detail.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/soil_detail.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/humidity_detail.html" />
@@ -107,7 +89,6 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/toxicity_detail.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/location_detail.html" />
         <option value="$PROJECT_DIR$/templates/plantjournal/flower_detail.html" />
-        <option value="$PROJECT_DIR$/templates/plantjournal/base.html" />
         <option value="$PROJECT_DIR$/plantjournal/models.py" />
         <option value="$PROJECT_DIR$/plantjournal/admin.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/note_detail.html" />
@@ -116,11 +97,14 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html" />
         <option value="$PROJECT_DIR$/plantjournal/urls.py" />
         <option value="$PROJECT_DIR$/plantjournal/views.py" />
+        <option value="$PROJECT_DIR$/johnson_eric_final_project/views.py" />
+        <option value="$PROJECT_DIR$/johnson_eric_final_project/urls.py" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/base.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="868" />
+    <option name="x" value="893" />
     <option name="y" value="13" />
     <option name="width" value="1043" />
     <option name="height" value="1034" />
@@ -263,15 +247,15 @@
       <workItem from="1555540110560" duration="684000" />
       <workItem from="1555557485708" duration="4402000" />
       <workItem from="1555637651679" duration="12701000" />
-      <workItem from="1555951694931" duration="6036000" />
+      <workItem from="1555951694931" duration="7410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24882000" />
+    <option name="totallyTimeSpent" value="26256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="868" y="13" width="1043" height="1034" extended-state="0" />
+    <frame x="893" y="13" width="1043" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22889115" />
@@ -404,16 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/plantjournal/light_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -497,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_type_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -525,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -549,6 +509,37 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
         </state>
       </provider>
     </entry>
