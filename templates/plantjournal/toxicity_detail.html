@@ -12,7 +12,7 @@
         <ul>
             {% for plant in plant_list %}
                 <li>
-                    <a href="">{{ plant }}</a>
+                    <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no plants with this toxicity.</em></li>

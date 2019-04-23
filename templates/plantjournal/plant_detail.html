@@ -13,7 +13,7 @@
                 <th>Light Type:</th>
                 <td>
                     {% if light != None %}
-                        <a href="">{{ light }}</a>
+                        <a href="{{ light.get_absolute_url }}">{{ light }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -23,7 +23,7 @@
                 <th>Soil Type:</th>
                 <td>
                     {% if soil != None %}
-                        <a href="">{{ soil }}</a>
+                        <a href="{{ soil.get_absolute_url }}">{{ soil }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -33,7 +33,7 @@
                 <th>Humidity Level:</th>
                 <td>
                     {% if humidity != None %}
-                        <a href="">{{ humidity }}</a>
+                        <a href="{{ humidity.get_absolute_url }}">{{ humidity }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -43,7 +43,7 @@
                 <th>Watering Schedule:</th>
                 <td>
                     {% if water != None %}
-                        <a href="">{{ water }}</a>
+                        <a href="{{ water.get_absolute_url }}">{{ water }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -53,7 +53,7 @@
                 <th>Fertilizer Schedule:</th>
                 <td>
                     {% if fertilizer != None %}
-                        <a href="">{{ fertilizer }}</a>
+                        <a href="{{ fertilizer.get_absolute_url }}">{{ fertilizer }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -63,7 +63,7 @@
                 <th>Location:</th>
                 <td>
                     {% if location != None %}
-                        <a href="">{{ location }}</a>
+                        <a href="{{ location.get_absolute_url }}">{{ location }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -73,7 +73,7 @@
                 <th>Toxicity:</th>
                 <td>
                     {% if toxicity != None %}
-                        <a href="">{{ toxicity }}</a>
+                        <a href="{{ toxicity.get_absolute_url }}">{{ toxicity }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -83,7 +83,7 @@
                 <th>Flowers:</th>
                 <td>
                     {% if flower != None %}
-                        <a href="">{{ flower }}</a>
+                        <a href="{{ flower.get_absolute_url }}">{{ flower }}</a>
                     {% else %}
                         {{ '' }}
                     {% endif %}
@@ -97,7 +97,7 @@
         <ul>
             {% for growth_instance in growth_instance_list %}
                 <li>
-                    <a href="">{{ growth_instance }}</a>
+                    <a href="{{ growth_instance.get_absolute_url }}">{{ growth_instance }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no growth instances for this plant.</em></li>
@@ -108,7 +108,7 @@
         <ul>
             {% for note in note_list %}
                 <li>
-                    <a href="">{{ note }}</a>
+                    <a href="{{ note.get_absolute_url }}">{{ note }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no notes associated with this plant.</em></li>

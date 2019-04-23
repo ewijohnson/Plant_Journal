@@ -217,7 +217,7 @@ class GrowthInstance(models.Model):
 
     def __str__(self):
         return '%s - %s (%s)' % (self.plant, self.growth_type, self.growth_instance_date)
-    
+
     def get_absolute_url(self):
         return reverse('plantjournal_growth_instance_detail_urlpattern',
                        kwargs={'pk': self.pk})
