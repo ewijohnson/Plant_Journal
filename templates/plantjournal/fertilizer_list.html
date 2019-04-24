@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Fertilizer Schedule List</h2>
+    <div>
+        <a href="{% url 'plantjournal_fertilizer_create_urlpattern' %}">
+            Create New Fertilizer Schedule
+        </a>
+    </div>
     <ul>
         {% for fertilizer in fertilizer_list %}
             <li>

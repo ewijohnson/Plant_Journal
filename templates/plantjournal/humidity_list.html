@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Humidity Level List</h2>
+    <div>
+        <a href="{% url 'plantjournal_humidity_create_urlpattern' %}">
+            Create New Humidity Level
+        </a>
+    </div>
     <ul>
         {% for humidity in humidity_list %}
             <li>

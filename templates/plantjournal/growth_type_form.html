@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Create Growth Type
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{% url 'plantjournal_growth_type_create_urlpattern' %}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Growth Type</button>
+    </form>
+{% endblock %}

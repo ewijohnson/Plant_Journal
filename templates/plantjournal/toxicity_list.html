@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Toxicity List</h2>
+    <div>
+        <a href="{% url 'plantjournal_toxicity_create_urlpattern' %}">
+            Create New Toxicity
+        </a>
+    </div>
     <ul>
         {% for toxicity in toxicity_list %}
             <li>

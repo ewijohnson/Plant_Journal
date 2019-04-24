@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Growth Instance List</h2>
+    <div>
+        <a href="{% url 'plantjournal_growth_instance_create_urlpattern' %}">
+            Create New Growth Instance
+        </a>
+    </div>
     <ul>
         {% for growth_instance in growth_instance_list %}
             <li>

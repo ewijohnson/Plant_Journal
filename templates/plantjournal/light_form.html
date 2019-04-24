@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Create Light Type
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{% url 'plantjournal_light_create_urlpattern' %}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Light Type</button>
+    </form>
+{% endblock %}

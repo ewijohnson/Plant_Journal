@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Light Type List</h2>
+    <div>
+        <a href="{% url 'plantjournal_light_create_urlpattern' %}">
+            Create New Light Type
+        </a>
+    </div>
     <ul>
         {% for light in light_list %}
             <li>

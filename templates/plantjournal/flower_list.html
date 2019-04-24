@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Flower List</h2>
+    <div>
+        <a href="{% url 'plantjournal_flower_create_urlpattern' %}">
+            Create New Flower
+        </a>
+    </div>
     <ul>
         {% for flower in flower_list %}
             <li>

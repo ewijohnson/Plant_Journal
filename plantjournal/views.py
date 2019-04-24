@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 
+from plantjournal.forms import LightForm, SoilForm, HumidityForm, WaterForm, FertilizerForm, LocationForm, \
+    ToxicityForm, FlowerForm, PlantForm, NoteForm, GrowthTypeForm, GrowthInstanceForm
+from plantjournal.utils import ObjectCreateMixin
 from .models import (
     Light,
     Soil,
@@ -42,6 +45,11 @@ class LightDetail(View):
         )
 
 
+class LightCreate(ObjectCreateMixin, View):
+    form_class = LightForm
+    template_name = 'plantjournal/light_form.html'
+
+
 class SoilList(View):
 
     def get(self, request):
@@ -65,6 +73,11 @@ class SoilDetail(View):
             'plantjournal/soil_detail.html',
             {'soil': soil, 'plant_list': plant_list}
         )
+
+
+class SoilCreate(ObjectCreateMixin, View):
+    form_class = SoilForm
+    template_name = 'plantjournal/soil_form.html'
 
 
 class HumidityList(View):
@@ -92,6 +105,11 @@ class HumidityDetail(View):
         )
 
 
+class HumidityCreate(ObjectCreateMixin, View):
+    form_class = HumidityForm
+    template_name = 'plantjournal/humidity_form.html'
+
+
 class WaterList(View):
 
     def get(self, request):
@@ -115,6 +133,11 @@ class WaterDetail(View):
             'plantjournal/water_detail.html',
             {'water': water, 'plant_list': plant_list}
         )
+
+
+class WaterCreate(ObjectCreateMixin, View):
+    form_class = WaterForm
+    template_name = 'plantjournal/water_form.html'
 
 
 class FertilizerList(View):
@@ -142,6 +165,11 @@ class FertilizerDetail(View):
         )
 
 
+class FertilizerCreate(ObjectCreateMixin, View):
+    form_class = FertilizerForm
+    template_name = 'plantjournal/fertilizer_form.html'
+
+
 class LocationList(View):
 
     def get(self, request):
@@ -165,6 +193,11 @@ class LocationDetail(View):
             'plantjournal/location_detail.html',
             {'location': location, 'plant_list': plant_list}
         )
+
+
+class LocationCreate(ObjectCreateMixin, View):
+    form_class = LocationForm
+    template_name = 'plantjournal/location_form.html'
 
 
 class ToxicityList(View):
@@ -192,6 +225,11 @@ class ToxicityDetail(View):
         )
 
 
+class ToxicityCreate(ObjectCreateMixin, View):
+    form_class = ToxicityForm
+    template_name = 'plantjournal/toxicity_form.html'
+
+
 class FlowerList(View):
 
     def get(self, request):
@@ -215,6 +253,11 @@ class FlowerDetail(View):
             'plantjournal/flower_detail.html',
             {'flower': flower, 'plant_list': plant_list}
         )
+
+
+class FlowerCreate(ObjectCreateMixin, View):
+    form_class = FlowerForm
+    template_name = 'plantjournal/flower_form.html'
 
 
 class PlantList(View):
@@ -261,6 +304,11 @@ class PlantDetail(View):
         )
 
 
+class PlantCreate(ObjectCreateMixin, View):
+    form_class = PlantForm
+    template_name = 'plantjournal/plant_form.html'
+
+
 class NoteList(View):
 
     def get(self, request):
@@ -286,6 +334,11 @@ class NoteDetail(View):
         )
 
 
+class NoteCreate(ObjectCreateMixin, View):
+    form_class = NoteForm
+    template_name = 'plantjournal/note_form.html'
+
+
 class GrowthTypeList(View):
 
     def get(self, request):
@@ -309,6 +362,11 @@ class GrowthTypeDetail(View):
             'plantjournal/growth_type_detail.html',
             {'growth_type': growth_type, 'growth_instance_list': growth_instance_list}
         )
+
+
+class GrowthTypeCreate(ObjectCreateMixin, View):
+    form_class = GrowthTypeForm
+    template_name = 'plantjournal/growth_type_form.html'
 
 
 class GrowthInstanceList(View):
@@ -337,3 +395,8 @@ class GrowthInstanceDetail(View):
              'plant': plant,
              'growth_type': growth_type}
         )
+
+
+class GrowthInstanceCreate(ObjectCreateMixin, View):
+    form_class = GrowthInstanceForm
+    template_name = 'plantjournal/growth_instance_form.html'

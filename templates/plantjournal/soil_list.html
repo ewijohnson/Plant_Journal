@@ -6,6 +6,11 @@
 
 {% block content %}
     <h2>Soil Type List</h2>
+    <div>
+        <a href="{% url 'plantjournal_soil_create_urlpattern' %}">
+            Create New Soil Type
+        </a>
+    </div>
     <ul>
         {% for soil in soil_list %}
             <li>

@@ -138,8 +138,8 @@ class Plant(models.Model):
     plant_id = models.AutoField(primary_key=True)
     plant_name = models.CharField(max_length=45)
     plant_number = models.CharField(max_length=45, blank=True, default='')
-    plant_latin_name = models.CharField(max_length=100, blank=True, default='')
     plant_nickname = models.CharField(max_length=45, blank=True, default='')
+    plant_latin_name = models.CharField(max_length=100, blank=True, default='')
     plant_description = models.TextField(blank=True, default='')
     light = models.ForeignKey(Light, related_name='plants', on_delete=models.PROTECT, blank=True, null=True, default='')
     soil = models.ForeignKey(Soil, related_name='plants', on_delete=models.PROTECT, blank=True, null=True, default='')
@@ -179,7 +179,7 @@ class Plant(models.Model):
 class Note(models.Model):
     note_id = models.AutoField(primary_key=True)
     note_date = models.DateField()
-    note_name = models.CharField(max_length=45, unique=True)
+    note_name = models.CharField(max_length=45)
     note_body = models.TextField()
     plant = models.ForeignKey(Plant, related_name='notes', on_delete=models.PROTECT)
 
@@ -192,6 +192,7 @@ class Note(models.Model):
 
     class Meta:
         ordering = ['-note_date', 'note_name']
+        unique_together = (('note_date', 'note_name'),)
 
 
 class GrowthType(models.Model):
