@@ -1,6 +1,4 @@
-from django.shortcuts import render, get_object_or_404, render_to_response
-from django.http.response import HttpResponse
-from django.template import loader
+from django.shortcuts import render, get_object_or_404
 from django.views import View
 
 from .models import (
@@ -37,7 +35,8 @@ class LightDetail(View):
             pk=pk
         )
         plant_list = light.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/light_detail.html',
             {'light': light, 'plant_list': plant_list}
         )
@@ -61,7 +60,8 @@ class SoilDetail(View):
             pk=pk
         )
         plant_list = soil.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/soil_detail.html',
             {'soil': soil, 'plant_list': plant_list}
         )
@@ -85,7 +85,8 @@ class HumidityDetail(View):
             pk=pk
         )
         plant_list = humidity.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/humidity_detail.html',
             {'humidity': humidity, 'plant_list': plant_list}
         )
@@ -109,7 +110,8 @@ class WaterDetail(View):
             pk=pk
         )
         plant_list = water.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/water_detail.html',
             {'water': water, 'plant_list': plant_list}
         )
@@ -133,7 +135,8 @@ class FertilizerDetail(View):
             pk=pk
         )
         plant_list = fertilizer.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/fertilizer_detail.html',
             {'fertilizer': fertilizer, 'plant_list': plant_list}
         )
@@ -157,7 +160,8 @@ class LocationDetail(View):
             pk=pk
         )
         plant_list = location.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/location_detail.html',
             {'location': location, 'plant_list': plant_list}
         )
@@ -181,7 +185,8 @@ class ToxicityDetail(View):
             pk=pk
         )
         plant_list = toxicity.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/toxicity_detail.html',
             {'toxicity': toxicity, 'plant_list': plant_list}
         )
@@ -205,7 +210,8 @@ class FlowerDetail(View):
             pk=pk
         )
         plant_list = flower.plants.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/flower_detail.html',
             {'flower': flower, 'plant_list': plant_list}
         )
@@ -238,7 +244,8 @@ class PlantDetail(View):
         flower = plant.flower
         growth_instance_list = plant.growth_instances.all()
         note_list = plant.notes.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/plant_detail.html',
             {'plant': plant,
              'light': light,
@@ -272,7 +279,8 @@ class NoteDetail(View):
             pk=pk
         )
         plant = note.plant
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/note_detail.html',
             {'note': note, 'plant': plant}
         )
@@ -296,7 +304,8 @@ class GrowthTypeDetail(View):
             pk=pk
         )
         growth_instance_list = growth_type.growth_instances.all()
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/growth_type_detail.html',
             {'growth_type': growth_type, 'growth_instance_list': growth_instance_list}
         )
@@ -321,7 +330,8 @@ class GrowthInstanceDetail(View):
         )
         plant = growth_instance.plant
         growth_type = growth_instance.growth_type
-        return render_to_response(
+        return render(
+            request,
             'plantjournal/growth_instance_detail.html',
             {'growth_instance': growth_instance,
              'plant': plant,
