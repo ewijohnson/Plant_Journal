@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>Flower - {{ flower }}</h2>
+    <ul>
+        <li>
+            <a href="{{ flower.get_update_url }}">
+                Edit Flower
+            </a>
+        </li>
+    </ul>
 
     <section>
         <h3>Plants</h3>

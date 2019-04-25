@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Update Flower
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ flower.get_update_url }}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Flower</button>
+    </form>
+{% endblock %}

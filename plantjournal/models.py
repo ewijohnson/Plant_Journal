@@ -13,6 +13,10 @@ class Light(models.Model):
         return reverse('plantjournal_light_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_light_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['light_type']
 
@@ -28,6 +32,10 @@ class Soil(models.Model):
         return reverse('plantjournal_soil_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_soil_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['soil_type']
 
@@ -41,6 +49,10 @@ class Humidity(models.Model):
 
     def get_absolute_url(self):
         return reverse('plantjournal_humidity_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('plantjournal_humidity_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -63,6 +75,10 @@ class Water(models.Model):
         return reverse('plantjournal_water_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_water_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['water_freq', 'water_type']
         unique_together = (('water_freq', 'water_type'),)
@@ -83,6 +99,10 @@ class Fertilizer(models.Model):
         return reverse('plantjournal_fertilizer_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_fertilizer_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['fertilizer_freq', 'fertilizer_type']
         unique_together = (('fertilizer_freq', 'fertilizer_type'),)
@@ -97,6 +117,10 @@ class Location(models.Model):
 
     def get_absolute_url(self):
         return reverse('plantjournal_location_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('plantjournal_location_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -114,6 +138,10 @@ class Toxicity(models.Model):
         return reverse('plantjournal_toxicity_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_toxicity_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['toxicity_type']
         verbose_name_plural = 'toxicities'
@@ -128,6 +156,10 @@ class Flower(models.Model):
 
     def get_absolute_url(self):
         return reverse('plantjournal_flower_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('plantjournal_flower_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -171,6 +203,10 @@ class Plant(models.Model):
         return reverse('plantjournal_plant_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_plant_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['plant_name', 'plant_number', 'plant_nickname']
         unique_together = (('plant_name', 'plant_number', 'plant_nickname'),)
@@ -190,6 +226,10 @@ class Note(models.Model):
         return reverse('plantjournal_note_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_update_url(self):
+        return reverse('plantjournal_note_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['-note_date', 'note_name']
         unique_together = (('note_date', 'note_name'),)
@@ -204,6 +244,10 @@ class GrowthType(models.Model):
 
     def get_absolute_url(self):
         return reverse('plantjournal_growth_type_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('plantjournal_growth_type_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -221,6 +265,10 @@ class GrowthInstance(models.Model):
 
     def get_absolute_url(self):
         return reverse('plantjournal_growth_instance_detail_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('plantjournal_growth_instance_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:

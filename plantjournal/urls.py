@@ -4,40 +4,53 @@ from plantjournal.views import (
     LightList,
     LightDetail,
     LightCreate,
+    LightUpdate,
     SoilList,
     SoilDetail,
     SoilCreate,
+    SoilUpdate,
     HumidityList,
     HumidityDetail,
     HumidityCreate,
+    HumidityUpdate,
     WaterList,
     WaterDetail,
     WaterCreate,
+    WaterUpdate,
     FertilizerList,
     FertilizerDetail,
     FertilizerCreate,
+    FertilizerUpdate,
     LocationList,
     LocationDetail,
     LocationCreate,
+    LocationUpdate,
     ToxicityList,
     ToxicityDetail,
     ToxicityCreate,
+    ToxicityUpdate,
     FlowerList,
     FlowerDetail,
     FlowerCreate,
+    FlowerUpdate,
     PlantList,
     PlantDetail,
     PlantCreate,
+    PlantUpdate,
     NoteList,
     NoteDetail,
     NoteCreate,
+    NoteUpdate,
     GrowthTypeList,
     GrowthTypeDetail,
     GrowthTypeCreate,
+    GrowthTypeUpdate,
     GrowthInstanceList,
     GrowthInstanceDetail,
     GrowthInstanceCreate,
+    GrowthInstanceUpdate,
 )
+
 
 urlpatterns = [
 
@@ -53,6 +66,10 @@ urlpatterns = [
          LightCreate.as_view(),
          name='plantjournal_light_create_urlpattern'),
 
+    path('light/<int:pk>/update/',
+         LightUpdate.as_view(),
+         name='plantjournal_light_update_urlpattern'),
+
     path('soil/',
          SoilList.as_view(),
          name='plantjournal_soil_list_urlpattern'),
@@ -64,6 +81,10 @@ urlpatterns = [
     path('soil/create/',
          SoilCreate.as_view(),
          name='plantjournal_soil_create_urlpattern'),
+
+    path('soil/<int:pk>/update/',
+         SoilUpdate.as_view(),
+         name='plantjournal_soil_update_urlpattern'),
 
     path('humidity/',
          HumidityList.as_view(),
@@ -77,6 +98,10 @@ urlpatterns = [
          HumidityCreate.as_view(),
          name='plantjournal_humidity_create_urlpattern'),
 
+    path('humidity/<int:pk>/update/',
+         HumidityUpdate.as_view(),
+         name='plantjournal_humidity_update_urlpattern'),
+
     path('water/',
          WaterList.as_view(),
          name='plantjournal_water_list_urlpattern'),
@@ -88,6 +113,10 @@ urlpatterns = [
     path('water/create/',
          WaterCreate.as_view(),
          name='plantjournal_water_create_urlpattern'),
+
+    path('water/<int:pk>/update/',
+         WaterUpdate.as_view(),
+         name='plantjournal_water_update_urlpattern'),
 
     path('fertilizer/',
          FertilizerList.as_view(),
@@ -101,6 +130,10 @@ urlpatterns = [
          FertilizerCreate.as_view(),
          name='plantjournal_fertilizer_create_urlpattern'),
 
+    path('fertilizer/<int:pk>/update/',
+         FertilizerUpdate.as_view(),
+         name='plantjournal_fertilizer_update_urlpattern'),
+
     path('location/',
          LocationList.as_view(),
          name='plantjournal_location_list_urlpattern'),
@@ -112,6 +145,10 @@ urlpatterns = [
     path('location/create/',
          LocationCreate.as_view(),
          name='plantjournal_location_create_urlpattern'),
+
+    path('location/<int:pk>/update/',
+         LocationUpdate.as_view(),
+         name='plantjournal_location_update_urlpattern'),
 
     path('toxicity/',
          ToxicityList.as_view(),
@@ -125,6 +162,10 @@ urlpatterns = [
          ToxicityCreate.as_view(),
          name='plantjournal_toxicity_create_urlpattern'),
 
+    path('toxicity/<int:pk>/update/',
+         ToxicityUpdate.as_view(),
+         name='plantjournal_toxicity_update_urlpattern'),
+
     path('flower/',
          FlowerList.as_view(),
          name='plantjournal_flower_list_urlpattern'),
@@ -136,6 +177,10 @@ urlpatterns = [
     path('flower/create/',
          FlowerCreate.as_view(),
          name='plantjournal_flower_create_urlpattern'),
+
+    path('flower/<int:pk>/update/',
+         FlowerUpdate.as_view(),
+         name='plantjournal_flower_update_urlpattern'),
 
     path('plant/',
          PlantList.as_view(),
@@ -149,6 +194,10 @@ urlpatterns = [
          PlantCreate.as_view(),
          name='plantjournal_plant_create_urlpattern'),
 
+    path('plant/<int:pk>/update/',
+         PlantUpdate.as_view(),
+         name='plantjournal_plant_update_urlpattern'),
+
     path('note/',
          NoteList.as_view(),
          name='plantjournal_note_list_urlpattern'),
@@ -160,6 +209,10 @@ urlpatterns = [
     path('note/create/',
          NoteCreate.as_view(),
          name='plantjournal_note_create_urlpattern'),
+
+    path('note/<int:pk>/update/',
+         NoteUpdate.as_view(),
+         name='plantjournal_note_update_urlpattern'),
 
     path('growth_type/',
          GrowthTypeList.as_view(),
@@ -173,6 +226,10 @@ urlpatterns = [
          GrowthTypeCreate.as_view(),
          name='plantjournal_growth_type_create_urlpattern'),
 
+    path('growth_type/<int:pk>/update/',
+         GrowthTypeUpdate.as_view(),
+         name='plantjournal_growth_type_update_urlpattern'),
+
     path('growth_instance/',
          GrowthInstanceList.as_view(),
          name='plantjournal_growth_instance_list_urlpattern'),
@@ -184,5 +241,9 @@ urlpatterns = [
     path('growth_instance/create/',
          GrowthInstanceCreate.as_view(),
          name='plantjournal_growth_instance_create_urlpattern'),
+
+    path('growth_instance/<int:pk>/update/',
+         GrowthInstanceUpdate.as_view(),
+         name='plantjournal_growth_instance_update_urlpattern'),
 
 ]

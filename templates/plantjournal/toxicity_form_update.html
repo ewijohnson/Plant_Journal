@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Update Toxicity
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ toxicity.get_update_url }}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Toxicity</button>
+    </form>
+{% endblock %}

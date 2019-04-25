@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>Fertilizer Schedule - {{ fertilizer }}</h2>
+    <ul>
+        <li>
+            <a href="{{ fertilizer.get_update_url }}">
+                Edit Fertilizer Schedule
+            </a>
+        </li>
+    </ul>
 
     <section>
         <h3>Plants</h3>

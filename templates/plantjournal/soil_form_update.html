@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Update Soil Type
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ soil.get_update_url }}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Soil Type</button>
+    </form>
+{% endblock %}

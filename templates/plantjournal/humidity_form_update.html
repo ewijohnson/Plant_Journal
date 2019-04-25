@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Update Humidity Level
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ humidity.get_update_url }}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Humidity Level</button>
+    </form>
+{% endblock %}

@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>{{ note }}</h2>
+    <ul>
+        <li>
+            <a href="{{ note.get_update_url }}">
+                Edit Note
+            </a>
+        </li>
+    </ul>
 
     <section>
         <p><em>(This note is associated with the plant:

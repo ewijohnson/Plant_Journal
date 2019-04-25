@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>Location - {{ location }}</h2>
+    <ul>
+        <li>
+            <a href="{{ location.get_update_url }}">
+                Edit Location
+            </a>
+        </li>
+    </ul>
 
     <section>
         <h3>Plants</h3>

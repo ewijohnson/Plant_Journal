@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>{{ growth_type }}</h2>
+    <ul>
+        <li>
+            <a href="{{ growth_type.get_update_url }}">
+                Edit Growth Type
+            </a>
+        </li>
+    </ul>
 
     <section>
         <h3>Growth Instances</h3>

@@ -1,0 +1,15 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Update Fertilizer Schedule
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ fertilizer.get_update_url }}"
+        method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Fertilizer Schedule</button>
+    </form>
+{% endblock %}

@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2>Humidity Level - {{ humidity }}</h2>
+    <ul>
+        <li>
+            <a href="{{ humidity.get_update_url }}">
+                Edit Humidity Level
+            </a>
+        </li>
+    </ul>
 
     <section>
         <h3>Plants</h3>
