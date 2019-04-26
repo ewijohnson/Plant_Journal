@@ -1,0 +1,26 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Error Deleting Toxicity
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Error Deleting Toxicity</h2>
+        <p>
+            You may not delete toxicity: {{ toxicity }}.
+            This toxicity is currently used with the
+            following plants:
+        </p>
+
+        <ul>
+            {% for plant in plants %}
+            <li><a href="{{ plant.get_absolute_url }}">{{ plant }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Return to <a href="{% url 'plantjournal_toxicity_list_urlpattern' %}">Toxicity List</a>.
+        </p>
+    </div>
+{% endblock %}

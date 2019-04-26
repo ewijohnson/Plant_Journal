@@ -1,0 +1,19 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Delete Toxicity
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ toxicity.get_delete_url }}"
+        method="post">
+        {% csrf_token %}
+        <p>
+            Are you sure that you want to delete
+            toxicity: {{ toxicity }}?
+        </p>
+        <a href="{{ toxicity.get_absolute_url }}">Cancel</a>
+        <button type="submit">Delete Toxicity</button>
+    </form>
+{% endblock %}

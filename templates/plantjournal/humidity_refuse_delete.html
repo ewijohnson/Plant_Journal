@@ -1,0 +1,26 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Error Deleting Humidity Level
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Error Deleting Humidity Level</h2>
+        <p>
+            You may not delete humidity level: {{ humidity }}.
+            This humidity level is currently used with the
+            following plants:
+        </p>
+
+        <ul>
+            {% for plant in plants %}
+            <li><a href="{{ plant.get_absolute_url }}">{{ plant }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Return to <a href="{% url 'plantjournal_humidity_list_urlpattern' %}">Humidity Level List</a>.
+        </p>
+    </div>
+{% endblock %}

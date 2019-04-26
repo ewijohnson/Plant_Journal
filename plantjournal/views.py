@@ -88,6 +88,37 @@ class LightUpdate(View):
                 context)
 
 
+class LightDelete(View):
+
+    def get(self, request, pk):
+        light = self.get_object(pk)
+        plants = light.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/light_refuse_delete.html',
+                {'light': light,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/light_confirm_delete.html',
+                {'light': light}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Light,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        light = self.get_object(pk)
+        light.delete()
+        return redirect('plantjournal_light_list_urlpattern')
+
+
 class SoilList(View):
 
     def get(self, request):
@@ -154,6 +185,37 @@ class SoilUpdate(View):
                 request,
                 self.template_name,
                 context)
+
+
+class SoilDelete(View):
+
+    def get(self, request, pk):
+        soil = self.get_object(pk)
+        plants = soil.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/soil_refuse_delete.html',
+                {'soil': soil,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/soil_confirm_delete.html',
+                {'soil': soil}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Soil,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        soil = self.get_object(pk)
+        soil.delete()
+        return redirect('plantjournal_soil_list_urlpattern')
 
 
 class HumidityList(View):
@@ -224,6 +286,37 @@ class HumidityUpdate(View):
                 context)
 
 
+class HumidityDelete(View):
+
+    def get(self, request, pk):
+        humidity = self.get_object(pk)
+        plants = humidity.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/humidity_refuse_delete.html',
+                {'humidity': humidity,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/humidity_confirm_delete.html',
+                {'humidity': humidity}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Humidity,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        humidity = self.get_object(pk)
+        humidity.delete()
+        return redirect('plantjournal_humidity_list_urlpattern')
+
+
 class WaterList(View):
 
     def get(self, request):
@@ -290,6 +383,37 @@ class WaterUpdate(View):
                 request,
                 self.template_name,
                 context)
+
+
+class WaterDelete(View):
+
+    def get(self, request, pk):
+        water = self.get_object(pk)
+        plants = water.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/water_refuse_delete.html',
+                {'water': water,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/water_confirm_delete.html',
+                {'water': water}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Water,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        water = self.get_object(pk)
+        water.delete()
+        return redirect('plantjournal_water_list_urlpattern')
 
 
 class FertilizerList(View):
@@ -360,6 +484,37 @@ class FertilizerUpdate(View):
                 context)
 
 
+class FertilizerDelete(View):
+
+    def get(self, request, pk):
+        fertilizer = self.get_object(pk)
+        plants = fertilizer.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/fertilizer_refuse_delete.html',
+                {'fertilizer': fertilizer,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/fertilizer_confirm_delete.html',
+                {'fertilizer': fertilizer}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Fertilizer,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        fertilizer = self.get_object(pk)
+        fertilizer.delete()
+        return redirect('plantjournal_fertilizer_list_urlpattern')
+
+
 class LocationList(View):
 
     def get(self, request):
@@ -428,6 +583,37 @@ class LocationUpdate(View):
                 context)
 
 
+class LocationDelete(View):
+
+    def get(self, request, pk):
+        location = self.get_object(pk)
+        plants = location.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/location_refuse_delete.html',
+                {'location': location,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/location_confirm_delete.html',
+                {'location': location}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Location,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        location = self.get_object(pk)
+        location.delete()
+        return redirect('plantjournal_location_list_urlpattern')
+
+
 class ToxicityList(View):
 
     def get(self, request):
@@ -494,6 +680,37 @@ class ToxicityUpdate(View):
                 request,
                 self.template_name,
                 context)
+
+
+class ToxicityDelete(View):
+
+    def get(self, request, pk):
+        toxicity = self.get_object(pk)
+        plants = toxicity.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/toxicity_refuse_delete.html',
+                {'toxicity': toxicity,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/toxicity_confirm_delete.html',
+                {'toxicity': toxicity}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Toxicity,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        toxicity = self.get_object(pk)
+        toxicity.delete()
+        return redirect('plantjournal_toxicity_list_urlpattern')
 
 
 class FlowerList(View):

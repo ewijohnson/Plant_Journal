@@ -1,0 +1,19 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Delete Light Type
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ light.get_delete_url }}"
+        method="post">
+        {% csrf_token %}
+        <p>
+            Are you sure that you want to delete
+            light type: {{ light }}?
+        </p>
+        <a href="{{ light.get_absolute_url }}">Cancel</a>
+        <button type="submit">Delete Light Type</button>
+    </form>
+{% endblock %}

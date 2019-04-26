@@ -17,6 +17,10 @@ class Light(models.Model):
         return reverse('plantjournal_light_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_light_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['light_type']
 
@@ -36,6 +40,10 @@ class Soil(models.Model):
         return reverse('plantjournal_soil_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_soil_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['soil_type']
 
@@ -53,6 +61,10 @@ class Humidity(models.Model):
 
     def get_update_url(self):
         return reverse('plantjournal_humidity_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse('plantjournal_humidity_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -79,6 +91,10 @@ class Water(models.Model):
         return reverse('plantjournal_water_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_water_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['water_freq', 'water_type']
         unique_together = (('water_freq', 'water_type'),)
@@ -103,6 +119,10 @@ class Fertilizer(models.Model):
         return reverse('plantjournal_fertilizer_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_fertilizer_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['fertilizer_freq', 'fertilizer_type']
         unique_together = (('fertilizer_freq', 'fertilizer_type'),)
@@ -123,6 +143,10 @@ class Location(models.Model):
         return reverse('plantjournal_location_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_location_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['location_name']
 
@@ -140,6 +164,10 @@ class Toxicity(models.Model):
 
     def get_update_url(self):
         return reverse('plantjournal_toxicity_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse('plantjournal_toxicity_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:

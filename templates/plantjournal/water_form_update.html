@@ -1,7 +1,7 @@
 {% extends 'plantjournal/base.html' %}
 
 {% block title %}
-    Update Water Schedule
+    Update Watering Schedule
 {% endblock %}
 
 {% block content %}
@@ -10,6 +10,6 @@
         method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Update Water Schedule</button>
+        <button type="submit">Update Watering Schedule</button>
     </form>
 {% endblock %}
