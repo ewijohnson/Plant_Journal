@@ -1,0 +1,19 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Delete Growth Type
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ growth_type.get_delete_url }}"
+        method="post">
+        {% csrf_token %}
+        <p>
+            Are you sure that you want to delete
+            growth type: {{ growth_type }}?
+        </p>
+        <a href="{{ growth_type.get_absolute_url }}">Cancel</a>
+        <button type="submit">Delete Growth Type</button>
+    </form>
+{% endblock %}

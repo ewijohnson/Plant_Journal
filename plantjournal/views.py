@@ -781,6 +781,37 @@ class FlowerUpdate(View):
                 context)
 
 
+class FlowerDelete(View):
+
+    def get(self, request, pk):
+        flower = self.get_object(pk)
+        plants = flower.plants.all()
+        if plants.count() > 0:
+            return render(
+                request,
+                'plantjournal/flower_refuse_delete.html',
+                {'flower': flower,
+                 'plants': plants}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/flower_confirm_delete.html',
+                {'flower': flower}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Flower,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        flower = self.get_object(pk)
+        flower.delete()
+        return redirect('plantjournal_flower_list_urlpattern')
+
+
 class PlantList(View):
 
     def get(self, request):
@@ -868,6 +899,39 @@ class PlantUpdate(View):
                 context)
 
 
+class PlantDelete(View):
+
+    def get(self, request, pk):
+        plant = self.get_object(pk)
+        notes = plant.notes.all()
+        growth_instances = plant.growth_instances.all()
+        if notes.count() > 0 or growth_instances.count() > 0:
+            return render(
+                request,
+                'plantjournal/plant_refuse_delete.html',
+                {'plant': plant,
+                 'notes': notes,
+                 'growth_instances': growth_instances}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/plant_confirm_delete.html',
+                {'plant': plant}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Plant,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        plant = self.get_object(pk)
+        plant.delete()
+        return redirect('plantjournal_plant_list_urlpattern')
+
+
 class NoteList(View):
 
     def get(self, request):
@@ -936,6 +1000,28 @@ class NoteUpdate(View):
                 context)
 
 
+class NoteDelete(View):
+
+    def get(self, request, pk):
+        note = self.get_object(pk)
+        return render(
+            request,
+            'plantjournal/note_confirm_delete.html',
+            {'note': note}
+        )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            Note,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        note = self.get_object(pk)
+        note.delete()
+        return redirect('plantjournal_note_list_urlpattern')
+
+
 class GrowthTypeList(View):
 
     def get(self, request):
@@ -1002,6 +1088,37 @@ class GrowthTypeUpdate(View):
                 request,
                 self.template_name,
                 context)
+
+
+class GrowthTypeDelete(View):
+
+    def get(self, request, pk):
+        growth_type = self.get_object(pk)
+        growth_instances = growth_type.growth_instances.all()
+        if growth_instances.count() > 0:
+            return render(
+                request,
+                'plantjournal/growth_type_refuse_delete.html',
+                {'growth_type': growth_type,
+                 'growth_instances': growth_instances}
+            )
+        else:
+            return render(
+                request,
+                'plantjournal/growth_type_confirm_delete.html',
+                {'growth_type': growth_type}
+            )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            GrowthType,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        growth_type = self.get_object(pk)
+        growth_type.delete()
+        return redirect('plantjournal_growth_type_list_urlpattern')
 
 
 class GrowthInstanceList(View):
@@ -1073,3 +1190,25 @@ class GrowthInstanceUpdate(View):
                 request,
                 self.template_name,
                 context)
+
+
+class GrowthInstanceDelete(View):
+
+    def get(self, request, pk):
+        growth_instance = self.get_object(pk)
+        return render(
+            request,
+            'plantjournal/growth_instance_confirm_delete.html',
+            {'growth_instance': growth_instance}
+        )
+
+    def get_object(self, pk):
+        return get_object_or_404(
+            GrowthInstance,
+            pk=pk
+        )
+
+    def post(self, request, pk):
+        growth_instance = self.get_object(pk)
+        growth_instance.delete()
+        return redirect('plantjournal_growth_instance_list_urlpattern')

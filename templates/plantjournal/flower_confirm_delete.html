@@ -1,0 +1,19 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Delete Flower
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ flower.get_delete_url }}"
+        method="post">
+        {% csrf_token %}
+        <p>
+            Are you sure that you want to delete
+            flower: {{ flower }}?
+        </p>
+        <a href="{{ flower.get_absolute_url }}">Cancel</a>
+        <button type="submit">Delete Flower</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Error Deleting Growth Type
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Error Deleting Growth Type</h2>
+        <p>
+            You may not delete growth type: {{ growth_type }}.
+            This growth type is currently used with the
+            following growth instances:
+        </p>
+
+        <ul>
+            {% for growth_instance in growth_instances %}
+            <li><a href="{{ growth_instance.get_absolute_url }}">{{ growth_instance }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Return to <a href="{% url 'plantjournal_growth_type_list_urlpattern' %}">Growth Type List</a>.
+        </p>
+    </div>
+{% endblock %}

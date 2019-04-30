@@ -1,0 +1,19 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Delete Note
+{% endblock %}
+
+{% block content %}
+    <form
+        action="{{ note.get_delete_url }}"
+        method="post">
+        {% csrf_token %}
+        <p>
+            Are you sure that you want to delete
+            note: {{ note }}?
+        </p>
+        <a href="{{ note.get_absolute_url }}">Cancel</a>
+        <button type="submit">Delete Note</button>
+    </form>
+{% endblock %}

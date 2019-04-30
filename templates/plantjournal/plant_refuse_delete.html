@@ -1,0 +1,38 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Error Deleting Plant
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Error Deleting Plant</h2>
+        <p>
+            You may not delete plant: {{ plant }}.
+            This flower is currently used with the
+            following notes and/or growth instances:
+        </p>
+
+        <h4>Notes:</h4>
+        <ul>
+            {% for note in notes %}
+                <li><a href="{{ note.get_absolute_url }}">{{ note }}</a></li>
+            {% empty %}
+                <li><em>There are no notes connected with this plant.</em></li>
+            {% endfor %}
+        </ul>
+
+        <h4>Growth Instances:</h4>
+        <ul>
+            {% for growth_instance in growth_instances %}
+                <li><a href="{{ growth_instance.get_absolute_url }}">{{ growth_instance }}</a></li>
+            {% empty %}
+                <li><em>There are no growth instances connected with this plant.</em></li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Return to <a href="{% url 'plantjournal_plant_list_urlpattern' %}">Plant List</a>.
+        </p>
+    </div>
+{% endblock %}

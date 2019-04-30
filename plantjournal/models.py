@@ -190,6 +190,10 @@ class Flower(models.Model):
         return reverse('plantjournal_flower_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_flower_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['flower_type']
 
@@ -235,6 +239,10 @@ class Plant(models.Model):
         return reverse('plantjournal_plant_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_plant_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['plant_name', 'plant_number', 'plant_nickname']
         unique_together = (('plant_name', 'plant_number', 'plant_nickname'),)
@@ -258,6 +266,10 @@ class Note(models.Model):
         return reverse('plantjournal_note_update_urlpattern',
                        kwargs={'pk': self.pk})
 
+    def get_delete_url(self):
+        return reverse('plantjournal_note_delete_urlpattern',
+                       kwargs={'pk': self.pk})
+
     class Meta:
         ordering = ['-note_date', 'note_name']
         unique_together = (('note_date', 'note_name'),)
@@ -276,6 +288,10 @@ class GrowthType(models.Model):
 
     def get_update_url(self):
         return reverse('plantjournal_growth_type_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse('plantjournal_growth_type_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -297,6 +313,10 @@ class GrowthInstance(models.Model):
 
     def get_update_url(self):
         return reverse('plantjournal_growth_instance_update_urlpattern',
+                       kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse('plantjournal_growth_instance_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:

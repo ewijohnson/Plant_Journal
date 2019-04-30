@@ -40,22 +40,27 @@ from plantjournal.views import (
     FlowerDetail,
     FlowerCreate,
     FlowerUpdate,
+    FlowerDelete,
     PlantList,
     PlantDetail,
     PlantCreate,
     PlantUpdate,
+    PlantDelete,
     NoteList,
     NoteDetail,
     NoteCreate,
     NoteUpdate,
+    NoteDelete,
     GrowthTypeList,
     GrowthTypeDetail,
     GrowthTypeCreate,
     GrowthTypeUpdate,
+    GrowthTypeDelete,
     GrowthInstanceList,
     GrowthInstanceDetail,
     GrowthInstanceCreate,
     GrowthInstanceUpdate,
+    GrowthInstanceDelete,
 )
 
 
@@ -217,6 +222,10 @@ urlpatterns = [
          FlowerUpdate.as_view(),
          name='plantjournal_flower_update_urlpattern'),
 
+    path('flower/<int:pk>/delete/',
+         FlowerDelete.as_view(),
+         name='plantjournal_flower_delete_urlpattern'),
+
     path('plant/',
          PlantList.as_view(),
          name='plantjournal_plant_list_urlpattern'),
@@ -232,6 +241,10 @@ urlpatterns = [
     path('plant/<int:pk>/update/',
          PlantUpdate.as_view(),
          name='plantjournal_plant_update_urlpattern'),
+
+    path('plant/<int:pk>/delete/',
+         PlantDelete.as_view(),
+         name='plantjournal_plant_delete_urlpattern'),
 
     path('note/',
          NoteList.as_view(),
@@ -249,6 +262,10 @@ urlpatterns = [
          NoteUpdate.as_view(),
          name='plantjournal_note_update_urlpattern'),
 
+    path('note/<int:pk>/delete/',
+         NoteDelete.as_view(),
+         name='plantjournal_note_delete_urlpattern'),
+
     path('growth_type/',
          GrowthTypeList.as_view(),
          name='plantjournal_growth_type_list_urlpattern'),
@@ -265,6 +282,10 @@ urlpatterns = [
          GrowthTypeUpdate.as_view(),
          name='plantjournal_growth_type_update_urlpattern'),
 
+    path('growth_type/<int:pk>/delete/',
+         GrowthTypeDelete.as_view(),
+         name='plantjournal_growth_type_delete_urlpattern'),
+
     path('growth_instance/',
          GrowthInstanceList.as_view(),
          name='plantjournal_growth_instance_list_urlpattern'),
@@ -280,5 +301,9 @@ urlpatterns = [
     path('growth_instance/<int:pk>/update/',
          GrowthInstanceUpdate.as_view(),
          name='plantjournal_growth_instance_update_urlpattern'),
+
+    path('growth_instance/<int:pk>/delete/',
+         GrowthInstanceDelete.as_view(),
+         name='plantjournal_growth_instance_delete_urlpattern'),
 
 ]

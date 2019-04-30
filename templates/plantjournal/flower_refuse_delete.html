@@ -1,0 +1,26 @@
+{% extends 'plantjournal/base.html' %}
+
+{% block title %}
+    Error Deleting Flower
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Error Deleting Flower</h2>
+        <p>
+            You may not delete flower: {{ flower }}.
+            This flower is currently used with the
+            following plants:
+        </p>
+
+        <ul>
+            {% for plant in plants %}
+            <li><a href="{{ plant.get_absolute_url }}">{{ plant }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Return to <a href="{% url 'plantjournal_flower_list_urlpattern' %}">Flower List</a>.
+        </p>
+    </div>
+{% endblock %}
