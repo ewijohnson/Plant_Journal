@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 
@@ -813,12 +814,50 @@ class FlowerDelete(View):
 
 
 class PlantList(View):
+    page_kwarg = 'page'
+    paginate_by = 25  # 25 plants per page
+    template_name = 'plantjournal/plant_list.html'
 
     def get(self, request):
+        plants = Plant.objects.all()
+        paginator = Paginator(
+            plants,
+            self.paginate_by
+        )
+        page_number = request.GET.get(
+            self.page_kwarg
+        )
+        try:
+            page = paginator.page(page_number)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+        except EmptyPage:
+            page = paginator.page(
+                paginator.num_pages)
+        if page.has_previous():
+            prev_url = "?{pkw}={n}".format(
+                pkw=self.page_kwarg,
+                n=page.previous_page_number()
+            )
+        else:
+            prev_url = None
+        if page.has_next():
+            next_url = "?{pkw}={n}".format(
+                pkw=self.page_kwarg,
+                n=page.next_page_number()
+            )
+        else:
+            next_url = None
+        context = {
+            'is_paginated':
+                page.has_other_pages(),
+            'next_page_url': next_url,
+            'paginator': paginator,
+            'previous_page_url': prev_url,
+            'plant_list': page,
+        }
         return render(
-            request,
-            'plantjournal/plant_list.html',
-            {'plant_list': Plant.objects.all()}
+            request, self.template_name, context
         )
 
 
@@ -937,12 +976,50 @@ class PlantDelete(View):
 
 
 class NoteList(View):
+    page_kwarg = 'page'
+    paginate_by = 25  # 25 notes per page
+    template_name = 'plantjournal/note_list.html'
 
     def get(self, request):
+        notes = Note.objects.all()
+        paginator = Paginator(
+            notes,
+            self.paginate_by
+        )
+        page_number = request.GET.get(
+            self.page_kwarg
+        )
+        try:
+            page = paginator.page(page_number)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+        except EmptyPage:
+            page = paginator.page(
+                paginator.num_pages)
+        if page.has_previous():
+            prev_url = "?{pkw}={n}".format(
+                pkw=self.page_kwarg,
+                n=page.previous_page_number()
+            )
+        else:
+            prev_url = None
+        if page.has_next():
+            next_url = "?{pkw}={n}".format(
+                pkw=self.page_kwarg,
+                n=page.next_page_number()
+            )
+        else:
+            next_url = None
+        context = {
+            'is_paginated':
+                page.has_other_pages(),
+            'next_page_url': next_url,
+            'paginator': paginator,
+            'previous_page_url': prev_url,
+            'note_list': page,
+        }
         return render(
-            request,
-            'plantjournal/note_list.html',
-            {'note_list': Note.objects.all()}
+            request, self.template_name, context
         )
 
 
