@@ -22,6 +22,16 @@
     <section>
         <table>
             <tr>
+                <th>Latin Name:</th>
+                <td>
+                    {% if plant_latin_name != None %}
+                        <a><em>{{ plant_latin_name }}</em></a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
                 <th>Light Type:</th>
                 <td>
                     {% if light != None %}
@@ -96,6 +106,16 @@
                 <td>
                     {% if flower != None %}
                         <a href="{{ flower.get_absolute_url }}">{{ flower }}</a>
+                    {% else %}
+                        {{ '' }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Plant Description:</th>
+                <td>
+                    {% if plant_description != None %}
+                        <p>{{ plant_description }}</p>
                     {% else %}
                         {{ '' }}
                     {% endif %}

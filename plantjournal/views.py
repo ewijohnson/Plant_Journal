@@ -829,6 +829,8 @@ class PlantDetail(View):
             Plant,
             pk=pk
         )
+        plant_latin_name = plant.plant_latin_name
+        plant_description = plant.plant_description
         light = plant.light
         soil = plant.soil
         humidity = plant.humidity
@@ -843,6 +845,8 @@ class PlantDetail(View):
             request,
             'plantjournal/plant_detail.html',
             {'plant': plant,
+             'plant_latin_name': plant_latin_name,
+             'plant_description': plant_description,
              'light': light,
              'soil': soil,
              'humidity': humidity,

@@ -250,7 +250,7 @@ class Plant(models.Model):
 
 class Note(models.Model):
     note_id = models.AutoField(primary_key=True)
-    note_date = models.DateField()
+    note_date = models.DateField(default='00/00/0000')
     note_name = models.CharField(max_length=45)
     note_body = models.TextField()
     plant = models.ForeignKey(Plant, related_name='notes', on_delete=models.PROTECT)
