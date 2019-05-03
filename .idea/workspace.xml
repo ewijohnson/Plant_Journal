@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/plantjournal/note_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/note_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="990" column="9" lean-forward="true" selection-start-line="990" selection-start-column="9" selection-end-line="990" selection-end-column="9" />
+            <state relative-caret-position="213">
+              <caret line="917" column="35" lean-forward="true" selection-start-line="917" selection-start-column="35" selection-end-line="917" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/plantjournal/note_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -40,25 +46,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0009_load_plant_test_data.py">
+        <entry file="file://$PROJECT_DIR$/templates/plantjournal/plant_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#49#88#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="956" lean-forward="true" selection-start-line="956" selection-end-line="956" />
-              <folding>
-                <element signature="e#53#92#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -128,19 +119,20 @@
         <option value="$PROJECT_DIR$/templates/plantjournal/growth_instance_detail.html" />
         <option value="$PROJECT_DIR$/plantjournal/models.py" />
         <option value="$PROJECT_DIR$/../final_project_create_test_data/generate_plant_test_data.py" />
-        <option value="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" />
         <option value="$PROJECT_DIR$/plantjournal/migrations/0009_load_plant_test_data.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/plant_list.html" />
         <option value="$PROJECT_DIR$/plantjournal/views.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/note_list.html" />
         <option value="$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py.py" />
         <option value="$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py" />
+        <option value="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1766" />
-    <option name="width" value="2086" />
+    <option name="x" value="661" />
+    <option name="y" value="18" />
+    <option name="width" value="3182" />
     <option name="height" value="2034" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -289,13 +281,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29682000" />
+    <option name="totallyTimeSpent" value="29750000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="785" y="0" width="927" height="904" extended-state="0" />
-    <editor active="true" />
+    <frame x="295" y="8" width="1413" height="904" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13411938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -607,26 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/note_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#97#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py.py" />
     <entry file="file://$PROJECT_DIR$/plantjournal/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -634,13 +609,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plantjournal/plant_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="124" column="7" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -659,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/plantjournal/plant_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="420">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
@@ -673,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="990" column="9" lean-forward="true" selection-start-line="990" selection-start-column="9" selection-end-line="990" selection-end-column="9" />
+        <state relative-caret-position="213">
+          <caret line="917" column="35" lean-forward="true" selection-start-line="917" selection-start-column="35" selection-end-line="917" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -695,6 +663,20 @@
           <folding>
             <element signature="e#53#92#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/plant_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plantjournal/note_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
