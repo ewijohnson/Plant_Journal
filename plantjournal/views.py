@@ -23,8 +23,7 @@ from .models import (
 )
 
 
-class LightList(PageLinksMixin, ListView):
-    paginate_by = 20
+class LightList(ListView):
     model = Light
 
 
@@ -211,8 +210,7 @@ class SoilDelete(View):
         return redirect('plantjournal_soil_list_urlpattern')
 
 
-class HumidityList(PageLinksMixin, ListView):
-    paginate_by = 20
+class HumidityList(ListView):
     model = Humidity
 
 
@@ -587,8 +585,7 @@ class LocationDelete(View):
         return redirect('plantjournal_location_list_urlpattern')
 
 
-class ToxicityList(PageLinksMixin, ListView):
-    paginate_by = 20
+class ToxicityList(ListView):
     model = Toxicity
 
 
@@ -979,8 +976,7 @@ class NoteDelete(View):
         return redirect('plantjournal_note_list_urlpattern')
 
 
-class GrowthTypeList(PageLinksMixin, ListView):
-    paginate_by = 20
+class GrowthTypeList(ListView):
     model = GrowthType
 
 
