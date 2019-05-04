@@ -266,44 +266,44 @@ urlpatterns = [
          NoteDelete.as_view(),
          name='plantjournal_note_delete_urlpattern'),
 
-    path('growth_type/',
+    path('growthtype/',
          GrowthTypeList.as_view(),
-         name='plantjournal_growth_type_list_urlpattern'),
+         name='plantjournal_growthtype_list_urlpattern'),
 
-    path('growth_type/<int:pk>/',
+    path('growthtype/<int:pk>/',
          GrowthTypeDetail.as_view(),
-         name='plantjournal_growth_type_detail_urlpattern'),
+         name='plantjournal_growthtype_detail_urlpattern'),
 
-    path('growth_type/create/',
+    path('growthtype/create/',
          GrowthTypeCreate.as_view(),
-         name='plantjournal_growth_type_create_urlpattern'),
+         name='plantjournal_growthtype_create_urlpattern'),
 
-    path('growth_type/<int:pk>/update/',
+    path('growthtype/<int:pk>/update/',
          GrowthTypeUpdate.as_view(),
-         name='plantjournal_growth_type_update_urlpattern'),
+         name='plantjournal_growthtype_update_urlpattern'),
 
-    path('growth_type/<int:pk>/delete/',
+    path('growthtype/<int:pk>/delete/',
          GrowthTypeDelete.as_view(),
-         name='plantjournal_growth_type_delete_urlpattern'),
+         name='plantjournal_growthtype_delete_urlpattern'),
 
-    path('growth_instance/',
+    path('growthinstance/',
          GrowthInstanceList.as_view(),
-         name='plantjournal_growth_instance_list_urlpattern'),
+         name='plantjournal_growthinstance_list_urlpattern'),
 
-    path('growth_instance/<int:pk>/',
+    path('growthinstance/<int:pk>/',
          GrowthInstanceDetail.as_view(),
-         name='plantjournal_growth_instance_detail_urlpattern'),
+         name='plantjournal_growthinstance_detail_urlpattern'),
 
-    path('growth_instance/create/',
+    path('growthinstance/create/',
          GrowthInstanceCreate.as_view(),
-         name='plantjournal_growth_instance_create_urlpattern'),
+         name='plantjournal_growthinstance_create_urlpattern'),
 
-    path('growth_instance/<int:pk>/update/',
+    path('growthinstance/<int:pk>/update/',
          GrowthInstanceUpdate.as_view(),
-         name='plantjournal_growth_instance_update_urlpattern'),
+         name='plantjournal_growthinstance_update_urlpattern'),
 
-    path('growth_instance/<int:pk>/delete/',
+    path('growthinstance/<int:pk>/delete/',
          GrowthInstanceDelete.as_view(),
-         name='plantjournal_growth_instance_delete_urlpattern'),
+         name='plantjournal_growthinstance_delete_urlpattern'),
 
 ]

@@ -1,19 +1,19 @@
 {% extends 'plantjournal/base.html' %}
 
 {% block title %}
-    Growth Instance - {{ growth_instance }}
+    Growth Instance - {{ growthinstance }}
 {% endblock %}
 
 {% block content %}
-    <h2>{{ growth_instance }}</h2>
+    <h2>{{ growthinstance }}</h2>
     <ul>
         <li>
-            <a href="{{ growth_instance.get_update_url }}">
+            <a href="{{ growthinstance.get_update_url }}">
                 Edit Growth Instance
             </a>
         </li>
         <li>
-            <a href="{{ growth_instance.get_delete_url }}">
+            <a href="{{ growthinstance.get_delete_url }}">
                 Delete Growth Instance
             </a>
         </li>
@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <th>Growth Type:</th>
-                <td><a href="{{ growth_type.get_absolute_url }}">{{ growth_type }}</a></td>
+                <td><a href="{{ growthtype.get_absolute_url }}">{{ growthtype }}</a></td>
             </tr>
         </table>
     </section>

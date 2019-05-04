@@ -1,15 +1,15 @@
 {% extends 'plantjournal/base.html' %}
 
 {% block title %}
-    Update Growth Type
+    Create Growth Instance
 {% endblock %}
 
 {% block content %}
     <form
-        action="{{ growth_type.get_update_url }}"
+        action="{% url 'plantjournal_growthinstance_create_urlpattern' %}"
         method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Update Growth Type</button>
+        <button type="submit">Create Growth Instance</button>
     </form>
 {% endblock %}

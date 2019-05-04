@@ -7,14 +7,14 @@
 {% block content %}
     <h2>Growth Type List</h2>
     <div>
-        <a href="{% url 'plantjournal_growth_type_create_urlpattern' %}">
+        <a href="{% url 'plantjournal_growthtype_create_urlpattern' %}">
             Create New Growth Type
         </a>
     </div>
     <ul>
-        {% for growth_type in growth_type_list %}
+        {% for growthtype in growthtype_list %}
             <li>
-                <a href="{{ growth_type.get_absolute_url }}">{{ growth_type }}</a>
+                <a href="{{ growthtype.get_absolute_url }}">{{ growthtype }}</a>
             </li>
         {% empty %}
             <li><em>There are currently no growth types available.</em></li>

@@ -1,19 +1,19 @@
 {% extends 'plantjournal/base.html' %}
 
 {% block title %}
-    Growth Type - {{ growth_type }}
+    Growth Type - {{ growthtype }}
 {% endblock %}
 
 {% block content %}
-    <h2>{{ growth_type }}</h2>
+    <h2>{{ growthtype }}</h2>
     <ul>
         <li>
-            <a href="{{ growth_type.get_update_url }}">
+            <a href="{{ growthtype.get_update_url }}">
                 Edit Growth Type
             </a>
         </li>
         <li>
-            <a href="{{ growth_type.get_delete_url }}">
+            <a href="{{ growthtype.get_delete_url }}">
                 Delete Growth Type
             </a>
         </li>
@@ -22,9 +22,9 @@
     <section>
         <h3>Growth Instances</h3>
         <ul>
-            {% for growth_instance in growth_instance_list %}
+            {% for growthinstance in growthinstance_list %}
                 <li>
-                    <a href="{{ growth_instance.get_absolute_url }}">{{ growth_instance }}</a>
+                    <a href="{{ growthinstance.get_absolute_url }}">{{ growthinstance }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no instances of this growth type.</em></li>

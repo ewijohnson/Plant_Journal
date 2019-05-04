@@ -813,7 +813,7 @@ class PlantDetail(View):
              'location': location,
              'toxicity': toxicity,
              'flower': flower,
-             'growth_instance_list': growth_instance_list,
+             'growthinstance_list': growth_instance_list,
              'note_list': note_list}
         )
 
@@ -873,7 +873,7 @@ class PlantDelete(View):
                 'plantjournal/plant_refuse_delete.html',
                 {'plant': plant,
                  'notes': notes,
-                 'growth_instances': growth_instances}
+                 'growthinstances': growth_instances}
             )
         else:
             return render(
@@ -979,14 +979,9 @@ class NoteDelete(View):
         return redirect('plantjournal_note_list_urlpattern')
 
 
-class GrowthTypeList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/growth_type_list.html',
-            {'growth_type_list': GrowthType.objects.all()}
-        )
+class GrowthTypeList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = GrowthType
 
 
 class GrowthTypeDetail(View):
@@ -999,20 +994,20 @@ class GrowthTypeDetail(View):
         growth_instance_list = growth_type.growth_instances.all()
         return render(
             request,
-            'plantjournal/growth_type_detail.html',
-            {'growth_type': growth_type, 'growth_instance_list': growth_instance_list}
+            'plantjournal/growthtype_detail.html',
+            {'growthtype': growth_type, 'growthinstance_list': growth_instance_list}
         )
 
 
 class GrowthTypeCreate(ObjectCreateMixin, View):
     form_class = GrowthTypeForm
-    template_name = 'plantjournal/growth_type_form.html'
+    template_name = 'plantjournal/growthtype_form.html'
 
 
 class GrowthTypeUpdate(View):
     form_class = GrowthTypeForm
     model = GrowthType
-    template_name = 'plantjournal/growth_type_form_update.html'
+    template_name = 'plantjournal/growthtype_form_update.html'
 
     def get_object(self, pk):
         return get_object_or_404(
@@ -1024,7 +1019,7 @@ class GrowthTypeUpdate(View):
         context = {
             'form': self.form_class(
                 instance=growth_type),
-            'growth_type': growth_type
+            'growthtype': growth_type
         }
         return render(
             request, self.template_name, context)
@@ -1039,7 +1034,7 @@ class GrowthTypeUpdate(View):
         else:
             context = {
                 'form': bound_form,
-                'growth_type': growth_type
+                'growthtype': growth_type
             }
             return render(
                 request,
@@ -1055,15 +1050,15 @@ class GrowthTypeDelete(View):
         if growth_instances.count() > 0:
             return render(
                 request,
-                'plantjournal/growth_type_refuse_delete.html',
-                {'growth_type': growth_type,
-                 'growth_instances': growth_instances}
+                'plantjournal/growthtype_refuse_delete.html',
+                {'growthtype': growth_type,
+                 'growthinstances': growth_instances}
             )
         else:
             return render(
                 request,
-                'plantjournal/growth_type_confirm_delete.html',
-                {'growth_type': growth_type}
+                'plantjournal/growthtype_confirm_delete.html',
+                {'growthtype': growth_type}
             )
 
     def get_object(self, pk):
@@ -1075,17 +1070,12 @@ class GrowthTypeDelete(View):
     def post(self, request, pk):
         growth_type = self.get_object(pk)
         growth_type.delete()
-        return redirect('plantjournal_growth_type_list_urlpattern')
+        return redirect('plantjournal_growthtype_list_urlpattern')
 
 
-class GrowthInstanceList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/growth_instance_list.html',
-            {'growth_instance_list': GrowthInstance.objects.all()}
-        )
+class GrowthInstanceList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = GrowthInstance
 
 
 class GrowthInstanceDetail(View):
@@ -1099,22 +1089,22 @@ class GrowthInstanceDetail(View):
         growth_type = growth_instance.growth_type
         return render(
             request,
-            'plantjournal/growth_instance_detail.html',
-            {'growth_instance': growth_instance,
+            'plantjournal/growthinstance_detail.html',
+            {'growthinstance': growth_instance,
              'plant': plant,
-             'growth_type': growth_type}
+             'growthtype': growth_type}
         )
 
 
 class GrowthInstanceCreate(ObjectCreateMixin, View):
     form_class = GrowthInstanceForm
-    template_name = 'plantjournal/growth_instance_form.html'
+    template_name = 'plantjournal/growthinstance_form.html'
 
 
 class GrowthInstanceUpdate(View):
     form_class = GrowthInstanceForm
     model = GrowthInstance
-    template_name = 'plantjournal/growth_instance_form_update.html'
+    template_name = 'plantjournal/growthinstance_form_update.html'
 
     def get_object(self, pk):
         return get_object_or_404(
@@ -1126,7 +1116,7 @@ class GrowthInstanceUpdate(View):
         context = {
             'form': self.form_class(
                 instance=growth_instance),
-            'growth_instance': growth_instance
+            'growthinstance': growth_instance
         }
         return render(
             request, self.template_name, context)
@@ -1141,7 +1131,7 @@ class GrowthInstanceUpdate(View):
         else:
             context = {
                 'form': bound_form,
-                'growth_instance': growth_instance
+                'growthinstance': growth_instance
             }
             return render(
                 request,
@@ -1155,8 +1145,8 @@ class GrowthInstanceDelete(View):
         growth_instance = self.get_object(pk)
         return render(
             request,
-            'plantjournal/growth_instance_confirm_delete.html',
-            {'growth_instance': growth_instance}
+            'plantjournal/growthinstance_confirm_delete.html',
+            {'growthinstance': growth_instance}
         )
 
     def get_object(self, pk):
@@ -1168,4 +1158,4 @@ class GrowthInstanceDelete(View):
     def post(self, request, pk):
         growth_instance = self.get_object(pk)
         growth_instance.delete()
-        return redirect('plantjournal_growth_instance_list_urlpattern')
+        return redirect('plantjournal_growthinstance_list_urlpattern')

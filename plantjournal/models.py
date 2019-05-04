@@ -283,15 +283,15 @@ class GrowthType(models.Model):
         return '%s' % self.growth_type_name
 
     def get_absolute_url(self):
-        return reverse('plantjournal_growth_type_detail_urlpattern',
+        return reverse('plantjournal_growthtype_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
     def get_update_url(self):
-        return reverse('plantjournal_growth_type_update_urlpattern',
+        return reverse('plantjournal_growthtype_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     def get_delete_url(self):
-        return reverse('plantjournal_growth_type_delete_urlpattern',
+        return reverse('plantjournal_growthtype_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:
@@ -300,7 +300,7 @@ class GrowthType(models.Model):
 
 class GrowthInstance(models.Model):
     growth_instance_id = models.AutoField(primary_key=True)
-    growth_instance_date = models.DateField()
+    growth_instance_date = models.DateField(default='00/00/0000')
     plant = models.ForeignKey(Plant, related_name='growth_instances', on_delete=models.PROTECT)
     growth_type = models.ForeignKey(GrowthType, related_name='growth_instances', on_delete=models.PROTECT)
 
@@ -308,15 +308,15 @@ class GrowthInstance(models.Model):
         return '%s - %s (%s)' % (self.plant, self.growth_type, self.growth_instance_date)
 
     def get_absolute_url(self):
-        return reverse('plantjournal_growth_instance_detail_urlpattern',
+        return reverse('plantjournal_growthinstance_detail_urlpattern',
                        kwargs={'pk': self.pk})
 
     def get_update_url(self):
-        return reverse('plantjournal_growth_instance_update_urlpattern',
+        return reverse('plantjournal_growthinstance_update_urlpattern',
                        kwargs={'pk': self.pk})
 
     def get_delete_url(self):
-        return reverse('plantjournal_growth_instance_delete_urlpattern',
+        return reverse('plantjournal_growthinstance_delete_urlpattern',
                        kwargs={'pk': self.pk})
 
     class Meta:

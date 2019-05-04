@@ -6,14 +6,14 @@
 
 {% block content %}
     <form
-        action="{{ growth_instance.get_delete_url }}"
+        action="{{ growthinstance.get_delete_url }}"
         method="post">
         {% csrf_token %}
         <p>
             Are you sure that you want to delete
-            growth instance: {{ growth_instance }}?
+            growth instance: {{ growthinstance }}?
         </p>
-        <a href="{{ growth_instance.get_absolute_url }}">Cancel</a>
+        <a href="{{ growthinstance.get_absolute_url }}">Cancel</a>
         <button type="submit">Delete Growth Instance</button>
     </form>
 {% endblock %}
