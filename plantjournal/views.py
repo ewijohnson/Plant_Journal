@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 
 from plantjournal.forms import LightForm, SoilForm, HumidityForm, WaterForm, FertilizerForm, LocationForm, \
     ToxicityForm, FlowerForm, PlantForm, NoteForm, GrowthTypeForm, GrowthInstanceForm
@@ -46,42 +47,10 @@ class LightCreate(CreateView):
     model = Light
 
 
-class LightUpdate(View):
+class LightUpdate(UpdateView):
     form_class = LightForm
     model = Light
     template_name = 'plantjournal/light_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        light = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=light),
-            'light': light
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        light = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=light)
-        if bound_form.is_valid():
-            new_light = bound_form.save()
-            return redirect(new_light)
-        else:
-            context = {
-                'form': bound_form,
-                'light': light
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class LightDelete(View):
@@ -140,42 +109,10 @@ class SoilCreate(CreateView):
     model = Soil
 
 
-class SoilUpdate(View):
+class SoilUpdate(UpdateView):
     form_class = SoilForm
     model = Soil
     template_name = 'plantjournal/soil_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        soil = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=soil),
-            'soil': soil
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        soil = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=soil)
-        if bound_form.is_valid():
-            new_soil = bound_form.save()
-            return redirect(new_soil)
-        else:
-            context = {
-                'form': bound_form,
-                'soil': soil
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class SoilDelete(View):
@@ -233,42 +170,10 @@ class HumidityCreate(CreateView):
     model = Humidity
 
 
-class HumidityUpdate(View):
+class HumidityUpdate(UpdateView):
     form_class = HumidityForm
     model = Humidity
     template_name = 'plantjournal/humidity_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        humidity = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=humidity),
-            'humidity': humidity
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        humidity = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=humidity)
-        if bound_form.is_valid():
-            new_humidity = bound_form.save()
-            return redirect(new_humidity)
-        else:
-            context = {
-                'form': bound_form,
-                'humidity': humidity
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class HumidityDelete(View):
@@ -327,42 +232,10 @@ class WaterCreate(CreateView):
     model = Water
 
 
-class WaterUpdate(View):
+class WaterUpdate(UpdateView):
     form_class = WaterForm
     model = Water
     template_name = 'plantjournal/water_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        water = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=water),
-            'water': water
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        water = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=water)
-        if bound_form.is_valid():
-            new_water = bound_form.save()
-            return redirect(new_water)
-        else:
-            context = {
-                'form': bound_form,
-                'water': water
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class WaterDelete(View):
@@ -421,42 +294,10 @@ class FertilizerCreate(CreateView):
     model = Fertilizer
 
 
-class FertilizerUpdate(View):
+class FertilizerUpdate(UpdateView):
     form_class = FertilizerForm
     model = Fertilizer
     template_name = 'plantjournal/fertilizer_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        fertilizer = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=fertilizer),
-            'fertilizer': fertilizer
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        fertilizer = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=fertilizer)
-        if bound_form.is_valid():
-            new_fertilizer = bound_form.save()
-            return redirect(new_fertilizer)
-        else:
-            context = {
-                'form': bound_form,
-                'fertilizer': fertilizer
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class FertilizerDelete(View):
@@ -515,42 +356,10 @@ class LocationCreate(CreateView):
     model = Location
 
 
-class LocationUpdate(View):
+class LocationUpdate(UpdateView):
     form_class = LocationForm
     model = Location
     template_name = 'plantjournal/location_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        location = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=location),
-            'location': location
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        location = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=location)
-        if bound_form.is_valid():
-            new_location = bound_form.save()
-            return redirect(new_location)
-        else:
-            context = {
-                'form': bound_form,
-                'location': location
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class LocationDelete(View):
@@ -608,42 +417,10 @@ class ToxicityCreate(CreateView):
     model = Toxicity
 
 
-class ToxicityUpdate(View):
+class ToxicityUpdate(UpdateView):
     form_class = ToxicityForm
     model = Toxicity
     template_name = 'plantjournal/toxicity_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        toxicity = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=toxicity),
-            'toxicity': toxicity
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        toxicity = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=toxicity)
-        if bound_form.is_valid():
-            new_toxicity = bound_form.save()
-            return redirect(new_toxicity)
-        else:
-            context = {
-                'form': bound_form,
-                'toxicity': toxicity
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class ToxicityDelete(View):
@@ -702,42 +479,10 @@ class FlowerCreate(CreateView):
     model = Flower
 
 
-class FlowerUpdate(View):
+class FlowerUpdate(UpdateView):
     form_class = FlowerForm
     model = Flower
     template_name = 'plantjournal/flower_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        flower = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=flower),
-            'flower': flower
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        flower = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=flower)
-        if bound_form.is_valid():
-            new_flower = bound_form.save()
-            return redirect(new_flower)
-        else:
-            context = {
-                'form': bound_form,
-                'flower': flower
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class FlowerDelete(View):
@@ -819,42 +564,10 @@ class PlantCreate(CreateView):
     model = Plant
 
 
-class PlantUpdate(View):
+class PlantUpdate(UpdateView):
     form_class = PlantForm
     model = Plant
     template_name = 'plantjournal/plant_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        plant = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=plant),
-            'plant': plant
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        plant = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=plant)
-        if bound_form.is_valid():
-            new_plant = bound_form.save()
-            return redirect(new_plant)
-        else:
-            context = {
-                'form': bound_form,
-                'plant': plant
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class PlantDelete(View):
@@ -915,64 +628,15 @@ class NoteCreate(CreateView):
     model = Note
 
 
-class NoteUpdate(View):
+class NoteUpdate(UpdateView):
     form_class = NoteForm
     model = Note
     template_name = 'plantjournal/note_form_update.html'
 
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
 
-    def get(self, request, pk):
-        note = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=note),
-            'note': note
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        note = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=note)
-        if bound_form.is_valid():
-            new_note = bound_form.save()
-            return redirect(new_note)
-        else:
-            context = {
-                'form': bound_form,
-                'note': note
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
-
-
-class NoteDelete(View):
-
-    def get(self, request, pk):
-        note = self.get_object(pk)
-        return render(
-            request,
-            'plantjournal/note_confirm_delete.html',
-            {'note': note}
-        )
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            Note,
-            pk=pk
-        )
-
-    def post(self, request, pk):
-        note = self.get_object(pk)
-        note.delete()
-        return redirect('plantjournal_note_list_urlpattern')
+class NoteDelete(DeleteView):
+    model = Note
+    success_url = reverse_lazy('plantjournal_note_list_urlpattern')
 
 
 class GrowthTypeList(ListView):
@@ -999,42 +663,10 @@ class GrowthTypeCreate(CreateView):
     model = GrowthType
 
 
-class GrowthTypeUpdate(View):
+class GrowthTypeUpdate(UpdateView):
     form_class = GrowthTypeForm
     model = GrowthType
     template_name = 'plantjournal/growthtype_form_update.html'
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
-
-    def get(self, request, pk):
-        growth_type = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=growth_type),
-            'growthtype': growth_type
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        growth_type = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=growth_type)
-        if bound_form.is_valid():
-            new_growth_type = bound_form.save()
-            return redirect(new_growth_type)
-        else:
-            context = {
-                'form': bound_form,
-                'growthtype': growth_type
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
 
 
 class GrowthTypeDelete(View):
@@ -1096,61 +728,12 @@ class GrowthInstanceCreate(CreateView):
     model = GrowthInstance
 
 
-class GrowthInstanceUpdate(View):
+class GrowthInstanceUpdate(UpdateView):
     form_class = GrowthInstanceForm
     model = GrowthInstance
     template_name = 'plantjournal/growthinstance_form_update.html'
 
-    def get_object(self, pk):
-        return get_object_or_404(
-            self.model,
-            pk=pk)
 
-    def get(self, request, pk):
-        growth_instance = self.get_object(pk)
-        context = {
-            'form': self.form_class(
-                instance=growth_instance),
-            'growthinstance': growth_instance
-        }
-        return render(
-            request, self.template_name, context)
-
-    def post(self, request, pk):
-        growth_instance = self.get_object(pk)
-        bound_form = self.form_class(
-            request.POST, instance=growth_instance)
-        if bound_form.is_valid():
-            new_growth_instance = bound_form.save()
-            return redirect(new_growth_instance)
-        else:
-            context = {
-                'form': bound_form,
-                'growthinstance': growth_instance
-            }
-            return render(
-                request,
-                self.template_name,
-                context)
-
-
-class GrowthInstanceDelete(View):
-
-    def get(self, request, pk):
-        growth_instance = self.get_object(pk)
-        return render(
-            request,
-            'plantjournal/growthinstance_confirm_delete.html',
-            {'growthinstance': growth_instance}
-        )
-
-    def get_object(self, pk):
-        return get_object_or_404(
-            GrowthInstance,
-            pk=pk
-        )
-
-    def post(self, request, pk):
-        growth_instance = self.get_object(pk)
-        growth_instance.delete()
-        return redirect('plantjournal_growthinstance_list_urlpattern')
+class GrowthInstanceDelete(DeleteView):
+    model = GrowthInstance
+    success_url = reverse_lazy('plantjournal_growthinstance_list_urlpattern')
