@@ -1,11 +1,10 @@
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 
 from plantjournal.forms import LightForm, SoilForm, HumidityForm, WaterForm, FertilizerForm, LocationForm, \
     ToxicityForm, FlowerForm, PlantForm, NoteForm, GrowthTypeForm, GrowthInstanceForm
-from plantjournal.utils import ObjectCreateMixin, PageLinksMixin
+from plantjournal.utils import PageLinksMixin
 
 from .models import (
     Light,
@@ -42,9 +41,9 @@ class LightDetail(View):
         )
 
 
-class LightCreate(ObjectCreateMixin, View):
+class LightCreate(CreateView):
     form_class = LightForm
-    template_name = 'plantjournal/light_form.html'
+    model = Light
 
 
 class LightUpdate(View):
@@ -136,9 +135,9 @@ class SoilDetail(View):
         )
 
 
-class SoilCreate(ObjectCreateMixin, View):
+class SoilCreate(CreateView):
     form_class = SoilForm
-    template_name = 'plantjournal/soil_form.html'
+    model = Soil
 
 
 class SoilUpdate(View):
@@ -229,9 +228,9 @@ class HumidityDetail(View):
         )
 
 
-class HumidityCreate(ObjectCreateMixin, View):
+class HumidityCreate(CreateView):
     form_class = HumidityForm
-    template_name = 'plantjournal/humidity_form.html'
+    model = Humidity
 
 
 class HumidityUpdate(View):
@@ -323,9 +322,9 @@ class WaterDetail(View):
         )
 
 
-class WaterCreate(ObjectCreateMixin, View):
+class WaterCreate(CreateView):
     form_class = WaterForm
-    template_name = 'plantjournal/water_form.html'
+    model = Water
 
 
 class WaterUpdate(View):
@@ -417,9 +416,9 @@ class FertilizerDetail(View):
         )
 
 
-class FertilizerCreate(ObjectCreateMixin, View):
+class FertilizerCreate(CreateView):
     form_class = FertilizerForm
-    template_name = 'plantjournal/fertilizer_form.html'
+    model = Fertilizer
 
 
 class FertilizerUpdate(View):
@@ -511,9 +510,9 @@ class LocationDetail(View):
         )
 
 
-class LocationCreate(ObjectCreateMixin, View):
+class LocationCreate(CreateView):
     form_class = LocationForm
-    template_name = 'plantjournal/location_form.html'
+    model = Location
 
 
 class LocationUpdate(View):
@@ -604,9 +603,9 @@ class ToxicityDetail(View):
         )
 
 
-class ToxicityCreate(ObjectCreateMixin, View):
+class ToxicityCreate(CreateView):
     form_class = ToxicityForm
-    template_name = 'plantjournal/toxicity_form.html'
+    model = Toxicity
 
 
 class ToxicityUpdate(View):
@@ -698,9 +697,9 @@ class FlowerDetail(View):
         )
 
 
-class FlowerCreate(ObjectCreateMixin, View):
+class FlowerCreate(CreateView):
     form_class = FlowerForm
-    template_name = 'plantjournal/flower_form.html'
+    model = Flower
 
 
 class FlowerUpdate(View):
@@ -815,9 +814,9 @@ class PlantDetail(View):
         )
 
 
-class PlantCreate(ObjectCreateMixin, View):
+class PlantCreate(CreateView):
     form_class = PlantForm
-    template_name = 'plantjournal/plant_form.html'
+    model = Plant
 
 
 class PlantUpdate(View):
@@ -911,9 +910,9 @@ class NoteDetail(View):
         )
 
 
-class NoteCreate(ObjectCreateMixin, View):
+class NoteCreate(CreateView):
     form_class = NoteForm
-    template_name = 'plantjournal/note_form.html'
+    model = Note
 
 
 class NoteUpdate(View):
@@ -995,9 +994,9 @@ class GrowthTypeDetail(View):
         )
 
 
-class GrowthTypeCreate(ObjectCreateMixin, View):
+class GrowthTypeCreate(CreateView):
     form_class = GrowthTypeForm
-    template_name = 'plantjournal/growthtype_form.html'
+    model = GrowthType
 
 
 class GrowthTypeUpdate(View):
@@ -1092,9 +1091,9 @@ class GrowthInstanceDetail(View):
         )
 
 
-class GrowthInstanceCreate(ObjectCreateMixin, View):
+class GrowthInstanceCreate(CreateView):
     form_class = GrowthInstanceForm
-    template_name = 'plantjournal/growthinstance_form.html'
+    model = GrowthInstance
 
 
 class GrowthInstanceUpdate(View):
