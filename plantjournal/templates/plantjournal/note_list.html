@@ -4,14 +4,25 @@
     Note List
 {% endblock %}
 
-{% block content %}
-    <h2>Note List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_note %}
         <a href="{% url 'plantjournal_note_create_urlpattern' %}"
            class="button button-primary">
             Create New Note
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Note List</h2>
+    {% if perms.plantjournal.add_note %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_note_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Note
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for note in note_list %}
             <li>

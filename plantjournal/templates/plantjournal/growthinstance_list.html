@@ -4,14 +4,25 @@
     Growth Instance List
 {% endblock %}
 
-{% block content %}
-    <h2>Growth Instance List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_growthinstance %}
         <a href="{% url 'plantjournal_growthinstance_create_urlpattern' %}"
            class="button button-primary">
             Create New Growth Instance
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Growth Instance List</h2>
+    {% if perms.plantjournal.add_growthinstance %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_growthinstance_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Growth Instance
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for growthinstance in growthinstance_list %}
             <li>

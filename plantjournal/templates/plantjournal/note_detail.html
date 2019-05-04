@@ -5,30 +5,39 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ note }}</h2>
-    <ul>
-        <li>
-            <a href="{{ note.get_update_url }}" class="button">
-                Edit Note
-            </a>
-        </li>
-        <li>
-            <a href="{{ note.get_delete_url }}" class="button">
-                Delete Note
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>{{ note }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_note %}
+                        <li>
+                            <a href="{{ note.get_update_url }}" class="button">
+                                Edit Note
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_note %}
+                        <li>
+                            <a href="{{ note.get_delete_url }}" class="button">
+                                Delete Note
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <p><em>(This note is associated with the plant:
-            <a href="{{ plant.get_absolute_url }}">{{ plant }})</a>
-        </em></p>
-    </section>
+                <section>
+                    <p><em>(This note is associated with the plant:
+                        <a href="{{ plant.get_absolute_url }}">{{ plant }})</a>
+                    </em></p>
+                </section>
 
-    <section>
-        <p>
-            {{ note.note_body }}
-        </p>
-    </section>
-
+                <section>
+                    <p>
+                        {{ note.note_body }}
+                    </p>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

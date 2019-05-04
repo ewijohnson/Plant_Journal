@@ -4,14 +4,25 @@
     Light Type List
 {% endblock %}
 
-{% block content %}
-    <h2>Light Type List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_light %}
         <a href="{% url 'plantjournal_light_create_urlpattern' %}"
            class="button button-primary">
             Create New Light Type
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Light Type List</h2>
+    {% if perms.plantjournal.add_light %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_light_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Light Type
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for light in light_list %}
             <li>

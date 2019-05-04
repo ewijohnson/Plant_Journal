@@ -4,14 +4,25 @@
     Watering Schedule List
 {% endblock %}
 
-{% block content %}
-    <h2>Watering Schedule List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_water %}
         <a href="{% url 'plantjournal_water_create_urlpattern' %}"
            class="button button-primary">
             Create New Watering Schedule
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Watering Schedule List</h2>
+    {% if perms.plantjournal.add_water %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_water_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Watering Schedule
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for water in water_list %}
             <li>

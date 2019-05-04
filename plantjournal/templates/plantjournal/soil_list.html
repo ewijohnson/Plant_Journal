@@ -4,14 +4,25 @@
     Soil Type List
 {% endblock %}
 
-{% block content %}
-    <h2>Soil Type List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_soil %}
         <a href="{% url 'plantjournal_soil_create_urlpattern' %}"
            class="button button-primary">
             Create New Soil Type
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Soil Type List</h2>
+    {% if perms.plantjournal.add_soil %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_soil_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Soil Type
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for soil in soil_list %}
             <li>

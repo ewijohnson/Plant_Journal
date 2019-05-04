@@ -5,146 +5,156 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Plant - {{ plant }}</h2>
-    <ul>
-        <li>
-            <a href="{{ plant.get_update_url }}" class="button">
-                Edit Plant
-            </a>
-        </li>
-        <li>
-            <a href="{{ plant.get_delete_url }}" class="button">
-                Delete Plant
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>Plant - {{ plant }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_plant %}
+                        <li>
+                            <a href="{{ plant.get_update_url }}" class="button">
+                                Edit Plant
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_plant %}
+                        <li>
+                            <a href="{{ plant.get_delete_url }}" class="button">
+                                Delete Plant
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <table>
-            <tr>
-                <th>Latin Name:</th>
-                <td>
-                    {% if plant_latin_name != None %}
-                        <a><em>{{ plant_latin_name }}</em></a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Light Type:</th>
-                <td>
-                    {% if light != None %}
-                        <a href="{{ light.get_absolute_url }}">{{ light }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Soil Type:</th>
-                <td>
-                    {% if soil != None %}
-                        <a href="{{ soil.get_absolute_url }}">{{ soil }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Humidity Level:</th>
-                <td>
-                    {% if humidity != None %}
-                        <a href="{{ humidity.get_absolute_url }}">{{ humidity }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Watering Schedule:</th>
-                <td>
-                    {% if water != None %}
-                        <a href="{{ water.get_absolute_url }}">{{ water }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Fertilizer Schedule:</th>
-                <td>
-                    {% if fertilizer != None %}
-                        <a href="{{ fertilizer.get_absolute_url }}">{{ fertilizer }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Location:</th>
-                <td>
-                    {% if location != None %}
-                        <a href="{{ location.get_absolute_url }}">{{ location }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Toxicity:</th>
-                <td>
-                    {% if toxicity != None %}
-                        <a href="{{ toxicity.get_absolute_url }}">{{ toxicity }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Flowers:</th>
-                <td>
-                    {% if flower != None %}
-                        <a href="{{ flower.get_absolute_url }}">{{ flower }}</a>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <th>Plant Description:</th>
-                <td>
-                    {% if plant_description != None %}
-                        <p>{{ plant_description }}</p>
-                    {% else %}
-                        {{ '' }}
-                    {% endif %}
-                </td>
-            </tr>
-        </table>
-    </section>
+                <section>
+                    <table>
+                        <tr>
+                            <th>Latin Name:</th>
+                            <td>
+                                {% if plant_latin_name != None %}
+                                    <a><em>{{ plant_latin_name }}</em></a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Light Type:</th>
+                            <td>
+                                {% if light != None %}
+                                    <a href="{{ light.get_absolute_url }}">{{ light }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Soil Type:</th>
+                            <td>
+                                {% if soil != None %}
+                                    <a href="{{ soil.get_absolute_url }}">{{ soil }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Humidity Level:</th>
+                            <td>
+                                {% if humidity != None %}
+                                    <a href="{{ humidity.get_absolute_url }}">{{ humidity }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Watering Schedule:</th>
+                            <td>
+                                {% if water != None %}
+                                    <a href="{{ water.get_absolute_url }}">{{ water }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Fertilizer Schedule:</th>
+                            <td>
+                                {% if fertilizer != None %}
+                                    <a href="{{ fertilizer.get_absolute_url }}">{{ fertilizer }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Location:</th>
+                            <td>
+                                {% if location != None %}
+                                    <a href="{{ location.get_absolute_url }}">{{ location }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Toxicity:</th>
+                            <td>
+                                {% if toxicity != None %}
+                                    <a href="{{ toxicity.get_absolute_url }}">{{ toxicity }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Flowers:</th>
+                            <td>
+                                {% if flower != None %}
+                                    <a href="{{ flower.get_absolute_url }}">{{ flower }}</a>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Plant Description:</th>
+                            <td>
+                                {% if plant_description != None %}
+                                    <p>{{ plant_description }}</p>
+                                {% else %}
+                                    {{ '' }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </section>
 
-    <section>
-        <h3>Growth Instances</h3>
-        <ul>
-            {% for growthinstance in growthinstance_list %}
-                <li>
-                    <a href="{{ growthinstance.get_absolute_url }}">{{ growthinstance }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no growth instances for this plant.</em></li>
-            {% endfor %}
-        </ul>
+                <section>
+                    <h3>Growth Instances</h3>
+                    <ul>
+                        {% for growthinstance in growthinstance_list %}
+                            <li>
+                                <a href="{{ growthinstance.get_absolute_url }}">{{ growthinstance }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no growth instances for this plant.</em></li>
+                        {% endfor %}
+                    </ul>
 
-        <h3>Notes</h3>
-        <ul>
-            {% for note in note_list %}
-                <li>
-                    <a href="{{ note.get_absolute_url }}">{{ note }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no notes associated with this plant.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                    <h3>Notes</h3>
+                    <ul>
+                        {% for note in note_list %}
+                            <li>
+                                <a href="{{ note.get_absolute_url }}">{{ note }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no notes associated with this plant.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

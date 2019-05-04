@@ -5,31 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ growthinstance }}</h2>
-    <ul>
-        <li>
-            <a href="{{ growthinstance.get_update_url }}" class="button">
-                Edit Growth Instance
-            </a>
-        </li>
-        <li>
-            <a href="{{ growthinstance.get_delete_url }}" class="button">
-                Delete Growth Instance
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>{{ growthinstance }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_growthinstance %}
+                        <li>
+                            <a href="{{ growthinstance.get_update_url }}" class="button">
+                                Edit Growth Instance
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_growthinstance %}
+                        <li>
+                            <a href="{{ growthinstance.get_delete_url }}" class="button">
+                                Delete Growth Instance
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <table>
-            <tr>
-                <th>Plant:</th>
-                <td><a href="{{ plant.get_absolute_url }}">{{ plant }}</a></td>
-            </tr>
-            <tr>
-                <th>Growth Type:</th>
-                <td><a href="{{ growthtype.get_absolute_url }}">{{ growthtype }}</a></td>
-            </tr>
-        </table>
-    </section>
-
+                    <section>
+                        <table>
+                            <tr>
+                                <th>Plant:</th>
+                                <td><a href="{{ plant.get_absolute_url }}">{{ plant }}</a></td>
+                            </tr>
+                            <tr>
+                                <th>Growth Type:</th>
+                                <td><a href="{{ growthtype.get_absolute_url }}">{{ growthtype }}</a></td>
+                            </tr>
+                        </table>
+                    </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

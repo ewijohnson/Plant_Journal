@@ -5,30 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Watering Schedule - {{ water }}</h2>
-    <ul>
-        <li>
-            <a href="{{ water.get_update_url }}" class="button">
-                Edit Watering Schedule
-            </a>
-        </li>
-        <li>
-            <a href="{{ water.get_delete_url }}" class="button">
-                Delete Watering Schedule
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>Watering Schedule - {{ water }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_water %}
+                        <li>
+                            <a href="{{ water.get_update_url }}" class="button">
+                                Edit Watering Schedule
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_water %}
+                        <li>
+                            <a href="{{ water.get_delete_url }}" class="button">
+                                Delete Watering Schedule
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <h3>Plants</h3>
-        <ul>
-            {% for plant in plant_list %}
-                <li>
-                    <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no plants with this watering schedule.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                <section>
+                    <h3>Plants</h3>
+                    <ul>
+                        {% for plant in plant_list %}
+                            <li>
+                                <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no plants with this watering schedule.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

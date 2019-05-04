@@ -5,30 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Humidity Level - {{ humidity }}</h2>
-    <ul>
-        <li>
-            <a href="{{ humidity.get_update_url }}" class="button">
-                Edit Humidity Level
-            </a>
-        </li>
-        <li>
-            <a href="{{ humidity.get_delete_url }}" class="button">
-                Delete Humidity Level
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>Humidity Level - {{ humidity }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_humidity %}
+                        <li>
+                            <a href="{{ humidity.get_update_url }}" class="button">
+                                Edit Humidity Level
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_humidity %}
+                        <li>
+                            <a href="{{ humidity.get_delete_url }}" class="button">
+                                Delete Humidity Level
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <h3>Plants</h3>
-        <ul>
-            {% for plant in plant_list %}
-                <li>
-                    <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no plants with this humidity level.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                <section>
+                    <h3>Plants</h3>
+                    <ul>
+                        {% for plant in plant_list %}
+                            <li>
+                                <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no plants with this humidity level.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

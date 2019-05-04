@@ -8,7 +8,7 @@ urlpatterns = [
 
     path('',
          RedirectView.as_view(
-             pattern_name='plantjournal_plant_list_urlpattern',
+             pattern_name='about_urlpattern',
              permanent=False
          )),
 

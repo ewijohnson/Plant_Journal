@@ -5,30 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Soil Type - {{ soil }}</h2>
-    <ul>
-        <li>
-            <a href="{{ soil.get_update_url }}" class="button">
-                Edit Soil Type
-            </a>
-        </li>
-        <li>
-            <a href="{{ soil.get_delete_url }}" class="button">
-                Delete Soil Type
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>Soil Type - {{ soil }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_soil %}
+                        <li>
+                            <a href="{{ soil.get_update_url }}" class="button">
+                                Edit Soil Type
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_soil %}
+                        <li>
+                            <a href="{{ soil.get_delete_url }}" class="button">
+                                Delete Soil Type
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <h3>Plants</h3>
-        <ul>
-            {% for plant in plant_list %}
-                <li>
-                    <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no plants with this soil type.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                <section>
+                    <h3>Plants</h3>
+                    <ul>
+                        {% for plant in plant_list %}
+                            <li>
+                                <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no plants with this soil type.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

@@ -5,30 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Toxicity - {{ toxicity }}</h2>
-    <ul>
-        <li>
-            <a href="{{ toxicity.get_update_url }}" class="button">
-                Edit Toxicity
-            </a>
-        </li>
-        <li>
-            <a href="{{ toxicity.get_delete_url }}" class="button">
-                Delete Toxicity
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>Toxicity - {{ toxicity }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_toxicity %}
+                        <li>
+                            <a href="{{ toxicity.get_update_url }}" class="button">
+                                Edit Toxicity
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_toxicity %}
+                        <li>
+                            <a href="{{ toxicity.get_delete_url }}" class="button">
+                                Delete Toxicity
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <h3>Plants</h3>
-        <ul>
-            {% for plant in plant_list %}
-                <li>
-                    <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no plants with this toxicity.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                <section>
+                    <h3>Plants</h3>
+                    <ul>
+                        {% for plant in plant_list %}
+                            <li>
+                                <a href="{{ plant.get_absolute_url }}">{{ plant }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no plants with this toxicity.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}

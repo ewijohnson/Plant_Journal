@@ -4,14 +4,25 @@
     Flower List
 {% endblock %}
 
-{% block content %}
-    <h2>Flower List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_flower %}
         <a href="{% url 'plantjournal_flower_create_urlpattern' %}"
            class="button button-primary">
             Create New Flower
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Flower List</h2>
+    {% if perms.plantjournal.add_flower %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_flower_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Flower
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for flower in flower_list %}
             <li>

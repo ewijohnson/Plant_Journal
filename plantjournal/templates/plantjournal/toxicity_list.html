@@ -4,14 +4,25 @@
     Toxicity List
 {% endblock %}
 
-{% block content %}
-    <h2>Toxicity List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_toxicity %}
         <a href="{% url 'plantjournal_toxicity_create_urlpattern' %}"
            class="button button-primary">
             Create New Toxicity
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Toxicity List</h2>
+    {% if perms.plantjournal.add_toxicity %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_toxicity_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Toxicity
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for toxicity in toxicity_list %}
             <li>

@@ -4,14 +4,25 @@
     Growth Type List
 {% endblock %}
 
-{% block content %}
-    <h2>Growth Type List</h2>
-    <div>
+{% block create_button %}
+    {% if perms.plantjournal.add_growthtype %}
         <a href="{% url 'plantjournal_growthtype_create_urlpattern' %}"
            class="button button-primary">
             Create New Growth Type
         </a>
-    </div>
+    {% endif %}
+{% endblock %}
+
+{% block org_content %}
+    <h2>Growth Type List</h2>
+    {% if perms.plantjournal.add_growthtype %}
+        <div class="mobile">
+            <a href="{% url 'plantjournal_growthtype_create_urlpattern' %}"
+               class="button button-primary">
+                Create New Growth Type
+            </a>
+        </div>
+    {% endif %}
     <ul>
         {% for growthtype in growthtype_list %}
             <li>

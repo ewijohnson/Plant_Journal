@@ -26,18 +26,20 @@
 <body>
 
 <div class="container">
-    <div class="offset-by-eight four columns">
-        <ul class="inline">
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'logout_urlpattern' %}">
-                    Log Out, {{ user.get_username }}
-                </a></li>
-            {% else %}
-                <li><a href="{% url 'login_urlpattern' %}">
-                    Log In
-                </a></li>
-            {% endif %}
-        </ul>
+    <div class="status row">
+        <div class="offset-by-eight four columns">
+            <ul class="inline">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout_urlpattern' %}">
+                        Log Out, {{ user.get_username }}
+                    </a></li>
+                {% else %}
+                    <li><a href="{% url 'login_urlpattern' %}">
+                        Log In
+                    </a></li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
     <header class="row">
         <div class="offset-by-one ten columns">
@@ -47,42 +49,78 @@
     </header>
     <nav>
         <ul>
-            <li>
-                <a href="{% url 'plantjournal_light_list_urlpattern' %}">
-                    Light Types</a></li>
-            <li>
-                <a href="{% url 'plantjournal_soil_list_urlpattern' %}">
-                    Soil Types</a></li>
-            <li>
-                <a href="{% url 'plantjournal_humidity_list_urlpattern' %}">
-                    Humidity Levels</a></li>
-            <li>
-                <a href="{% url 'plantjournal_water_list_urlpattern' %}">
-                    Watering Schedules</a></li>
-            <li>
-                <a href="{% url 'plantjournal_fertilizer_list_urlpattern' %}">
-                    Fertilizer Schedules</a></li>
-            <li>
-                <a href="{% url 'plantjournal_location_list_urlpattern' %}">
-                    Locations</a></li>
-            <li>
-                <a href="{% url 'plantjournal_toxicity_list_urlpattern' %}">
-                    Toxicities</a></li>
-            <li>
-                <a href="{% url 'plantjournal_flower_list_urlpattern' %}">
-                    Flowers</a></li>
-            <li>
-                <a href="{% url 'plantjournal_plant_list_urlpattern' %}">
-                    Plants</a></li>
-            <li>
-                <a href="{% url 'plantjournal_note_list_urlpattern' %}">
-                    Notes</a></li>
-            <li>
-                <a href="{% url 'plantjournal_growthtype_list_urlpattern' %}">
-                    Growth Types</a></li>
-            <li>
-                <a href="{% url 'plantjournal_growthinstance_list_urlpattern' %}">
-                    Growth Instances</a></li>
+            {% if perms.plantjournal.view_light %}
+                <li>
+                    <a href="{% url 'plantjournal_light_list_urlpattern' %}">
+                        Light Types</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_soil %}
+                <li>
+                    <a href="{% url 'plantjournal_soil_list_urlpattern' %}">
+                        Soil Types</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_humidity %}
+                <li>
+                    <a href="{% url 'plantjournal_humidity_list_urlpattern' %}">
+                        Humidity Levels</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_water %}
+                <li>
+                    <a href="{% url 'plantjournal_water_list_urlpattern' %}">
+                        Watering Schedules</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_fertilizer %}
+                <li>
+                    <a href="{% url 'plantjournal_fertilizer_list_urlpattern' %}">
+                        Fertilizer Schedules</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_location %}
+                <li>
+                    <a href="{% url 'plantjournal_location_list_urlpattern' %}">
+                        Locations</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_toxicity %}
+                <li>
+                    <a href="{% url 'plantjournal_toxicity_list_urlpattern' %}">
+                        Toxicities</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_flower %}
+                <li>
+                    <a href="{% url 'plantjournal_flower_list_urlpattern' %}">
+                        Flowers</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_plant %}
+                <li>
+                    <a href="{% url 'plantjournal_plant_list_urlpattern' %}">
+                        Plants</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_note %}
+                <li>
+                    <a href="{% url 'plantjournal_note_list_urlpattern' %}">
+                        Notes</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_growthtype %}
+                <li>
+                    <a href="{% url 'plantjournal_growthtype_list_urlpattern' %}">
+                        Growth Types</a></li>
+            {% endif %}
+
+            {% if perms.plantjournal.view_growthinstance %}
+                <li>
+                    <a href="{% url 'plantjournal_growthinstance_list_urlpattern' %}">
+                        Growth Instances</a></li>
+            {% endif %}
+
             <li>
                 <a href="{% url 'about_urlpattern' %}">
                     About</a></li>

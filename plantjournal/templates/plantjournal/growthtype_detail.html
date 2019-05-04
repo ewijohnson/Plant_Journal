@@ -5,30 +5,40 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ growthtype }}</h2>
-    <ul>
-        <li>
-            <a href="{{ growthtype.get_update_url }}" class="button">
-                Edit Growth Type
-            </a>
-        </li>
-        <li>
-            <a href="{{ growthtype.get_delete_url }}" class="button">
-                Delete Growth Type
-            </a>
-        </li>
-    </ul>
+    <article>
+        <div class="row">
+            <div class="offset-by-two eight columns">
+                <h2>{{ growthtype }}</h2>
+                <ul class="inline">
+                    {% if perms.plantjournal.change_growthtype %}
+                        <li>
+                            <a href="{{ growthtype.get_update_url }}" class="button">
+                                Edit Growth Type
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if perms.plantjournal.delete_growthtype %}
+                        <li>
+                            <a href="{{ growthtype.get_delete_url }}" class="button">
+                                Delete Growth Type
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
 
-    <section>
-        <h3>Growth Instances</h3>
-        <ul>
-            {% for growthinstance in growthinstance_list %}
-                <li>
-                    <a href="{{ growthinstance.get_absolute_url }}">{{ growthinstance }}</a>
-                </li>
-            {% empty %}
-                <li><em>There are currently no instances of this growth type.</em></li>
-            {% endfor %}
-        </ul>
-    </section>
+                <section>
+                    <h3>Growth Instances</h3>
+                    <ul>
+                        {% for growthinstance in growthinstance_list %}
+                            <li>
+                                <a href="{{ growthinstance.get_absolute_url }}">{{ growthinstance }}</a>
+                            </li>
+                        {% empty %}
+                            <li><em>There are currently no instances of this growth type.</em></li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
 {% endblock %}
