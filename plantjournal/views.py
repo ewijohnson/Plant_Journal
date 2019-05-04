@@ -1,10 +1,12 @@
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
+from django.views.generic import ListView
 
 from plantjournal.forms import LightForm, SoilForm, HumidityForm, WaterForm, FertilizerForm, LocationForm, \
     ToxicityForm, FlowerForm, PlantForm, NoteForm, GrowthTypeForm, GrowthInstanceForm
-from plantjournal.utils import ObjectCreateMixin
+from plantjournal.utils import ObjectCreateMixin, PageLinksMixin
+
 from .models import (
     Light,
     Soil,
@@ -21,14 +23,9 @@ from .models import (
 )
 
 
-class LightList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/light_list.html',
-            {'light_list': Light.objects.all()}
-        )
+class LightList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Light
 
 
 class LightDetail(View):
@@ -120,14 +117,9 @@ class LightDelete(View):
         return redirect('plantjournal_light_list_urlpattern')
 
 
-class SoilList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/soil_list.html',
-            {'soil_list': Soil.objects.all()}
-        )
+class SoilList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Soil
 
 
 class SoilDetail(View):
@@ -219,14 +211,9 @@ class SoilDelete(View):
         return redirect('plantjournal_soil_list_urlpattern')
 
 
-class HumidityList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/humidity_list.html',
-            {'humidity_list': Humidity.objects.all()}
-        )
+class HumidityList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Humidity
 
 
 class HumidityDetail(View):
@@ -318,14 +305,9 @@ class HumidityDelete(View):
         return redirect('plantjournal_humidity_list_urlpattern')
 
 
-class WaterList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/water_list.html',
-            {'water_list': Water.objects.all()}
-        )
+class WaterList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Water
 
 
 class WaterDetail(View):
@@ -417,14 +399,9 @@ class WaterDelete(View):
         return redirect('plantjournal_water_list_urlpattern')
 
 
-class FertilizerList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/fertilizer_list.html',
-            {'fertilizer_list': Fertilizer.objects.all()}
-        )
+class FertilizerList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Fertilizer
 
 
 class FertilizerDetail(View):
@@ -516,14 +493,9 @@ class FertilizerDelete(View):
         return redirect('plantjournal_fertilizer_list_urlpattern')
 
 
-class LocationList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/location_list.html',
-            {'location_list': Location.objects.all()}
-        )
+class LocationList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Location
 
 
 class LocationDetail(View):
@@ -615,14 +587,9 @@ class LocationDelete(View):
         return redirect('plantjournal_location_list_urlpattern')
 
 
-class ToxicityList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/toxicity_list.html',
-            {'toxicity_list': Toxicity.objects.all()}
-        )
+class ToxicityList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Toxicity
 
 
 class ToxicityDetail(View):
@@ -714,14 +681,9 @@ class ToxicityDelete(View):
         return redirect('plantjournal_toxicity_list_urlpattern')
 
 
-class FlowerList(View):
-
-    def get(self, request):
-        return render(
-            request,
-            'plantjournal/flower_list.html',
-            {'flower_list': Flower.objects.all()}
-        )
+class FlowerList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Flower
 
 
 class FlowerDetail(View):
@@ -813,52 +775,9 @@ class FlowerDelete(View):
         return redirect('plantjournal_flower_list_urlpattern')
 
 
-class PlantList(View):
-    page_kwarg = 'page'
-    paginate_by = 25  # 25 plants per page
-    template_name = 'plantjournal/plant_list.html'
-
-    def get(self, request):
-        plants = Plant.objects.all()
-        paginator = Paginator(
-            plants,
-            self.paginate_by
-        )
-        page_number = request.GET.get(
-            self.page_kwarg
-        )
-        try:
-            page = paginator.page(page_number)
-        except PageNotAnInteger:
-            page = paginator.page(1)
-        except EmptyPage:
-            page = paginator.page(
-                paginator.num_pages)
-        if page.has_previous():
-            prev_url = "?{pkw}={n}".format(
-                pkw=self.page_kwarg,
-                n=page.previous_page_number()
-            )
-        else:
-            prev_url = None
-        if page.has_next():
-            next_url = "?{pkw}={n}".format(
-                pkw=self.page_kwarg,
-                n=page.next_page_number()
-            )
-        else:
-            next_url = None
-        context = {
-            'is_paginated':
-                page.has_other_pages(),
-            'next_page_url': next_url,
-            'paginator': paginator,
-            'previous_page_url': prev_url,
-            'plant_list': page,
-        }
-        return render(
-            request, self.template_name, context
-        )
+class PlantList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Plant
 
 
 class PlantDetail(View):
@@ -975,52 +894,9 @@ class PlantDelete(View):
         return redirect('plantjournal_plant_list_urlpattern')
 
 
-class NoteList(View):
-    page_kwarg = 'page'
-    paginate_by = 25  # 25 notes per page
-    template_name = 'plantjournal/note_list.html'
-
-    def get(self, request):
-        notes = Note.objects.all()
-        paginator = Paginator(
-            notes,
-            self.paginate_by
-        )
-        page_number = request.GET.get(
-            self.page_kwarg
-        )
-        try:
-            page = paginator.page(page_number)
-        except PageNotAnInteger:
-            page = paginator.page(1)
-        except EmptyPage:
-            page = paginator.page(
-                paginator.num_pages)
-        if page.has_previous():
-            prev_url = "?{pkw}={n}".format(
-                pkw=self.page_kwarg,
-                n=page.previous_page_number()
-            )
-        else:
-            prev_url = None
-        if page.has_next():
-            next_url = "?{pkw}={n}".format(
-                pkw=self.page_kwarg,
-                n=page.next_page_number()
-            )
-        else:
-            next_url = None
-        context = {
-            'is_paginated':
-                page.has_other_pages(),
-            'next_page_url': next_url,
-            'paginator': paginator,
-            'previous_page_url': prev_url,
-            'note_list': page,
-        }
-        return render(
-            request, self.template_name, context
-        )
+class NoteList(PageLinksMixin, ListView):
+    paginate_by = 20
+    model = Note
 
 
 class NoteDetail(View):
