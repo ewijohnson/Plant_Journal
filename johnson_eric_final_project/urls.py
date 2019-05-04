@@ -1,10 +1,24 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import redirect_root_view
+from django.views.generic import RedirectView, TemplateView
 
 
 urlpatterns = [
-    path('', redirect_root_view),
+
+    path('',
+         RedirectView.as_view(
+             pattern_name='plantjournal_plant_list_urlpattern',
+             permanent=False
+         )),
+
+    path('about/',
+         TemplateView.as_view(
+             template_name='plantjournal/about.html'),
+         name='about_urlpattern'
+         ),
+
     path('admin/', admin.site.urls),
+
     path('', include('plantjournal.urls'))
+
 ]
