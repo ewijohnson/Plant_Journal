@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/basestarter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/fertilizer_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/fertilizer_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/fertilizer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/fertilizer_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/flower_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/flower_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/flower_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/flower_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthtype_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthtype_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthtype_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthtype_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/humidity_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/humidity_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/humidity_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/humidity_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/light_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/light_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/light_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/light_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/location_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/location_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/location_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/location_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/note_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/note_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/note_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/note_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/soil_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/soil_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/soil_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/soil_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/toxicity_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/toxicity_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/toxicity_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/toxicity_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/water_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/water_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/water_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/water_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,36 +14,21 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/basestarter.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1394">
-                    <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0011_auto_20190504_1035.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plantjournal/static/plantjournal/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-714" />
           </provider>
         </entry>
       </file>
@@ -82,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -101,7 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/plantjournal/plant_list.html" />
         <option value="$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py.py" />
         <option value="$PROJECT_DIR$/plantjournal/migrations/0010_load_note_test_data.py" />
         <option value="$PROJECT_DIR$/templates/plantjournal/plant_detail.html" />
@@ -152,6 +108,7 @@
         <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_list.html" />
         <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_detail.html" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/settings.py" />
+        <option value="$PROJECT_DIR$/plantjournal/migrations/0011_auto_20190504_1035.py" />
       </list>
     </option>
   </component>
@@ -181,11 +138,6 @@
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -197,21 +149,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/plantjournal/static/plantjournal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/johnson_eric_final_project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\migrations" />
+      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\disabled_migrations" />
+      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\static\plantjournal" />
+      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\templates\plantjournal" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\static\plantjournal" />
       <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\migrations" />
       <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\templates\plantjournal" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\migrations" />
-      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\static\plantjournal" />
-      <recent name="C:\Users\oboec\PycharmProjects\IS 590 WFO\johnson_eric_final_project\plantjournal\templates\plantjournal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -299,17 +252,17 @@
       <workItem from="1556841845800" duration="3841000" />
       <workItem from="1556846768210" duration="895000" />
       <workItem from="1556931648014" duration="4280000" />
+      <workItem from="1557094115272" duration="2470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55844000" />
+    <option name="totallyTimeSpent" value="58377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="800" y="12" width="912" height="904" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2254673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2301402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,7 +278,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3288948" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info active="true" anchor="bottom" id="manage.py@johnson_eric_final_project" order="13" visible="true" weight="0.31225806" />
+      <window_info anchor="bottom" id="manage.py@johnson_eric_final_project" order="13" visible="true" weight="0.31225806" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -368,9 +321,6 @@
     <SUITE FILE_PATH="coverage/johnson_eric_final_project$generate_plant_test_data.coverage" NAME="generate_plant_test_data Coverage Results" MODIFIED="1556756622053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../final_project_create_test_data" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_form.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_form_update.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,9 +431,6 @@
     <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0009_load_plant_test_data.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0011_auto_20190504_1035.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0012_create_groups.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -528,13 +475,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/basestarter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -713,14 +653,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/basestarter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="356">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/migrations/0011_auto_20190504_1035.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/static/plantjournal/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714" />
       </provider>
     </entry>
   </component>
