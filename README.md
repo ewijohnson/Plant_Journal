@@ -10,7 +10,7 @@ plants owned; light, water, and soil conditions; and other detailed information.
 As this application was written to require log in functionality, anyone can view 
 it using the Guest log in that I have provided. 
 
-User Name: guest
+User Name: guest  
 Password: plant123
 
 The guest only has view capabilities, and cannot add, edit, or delete information 
