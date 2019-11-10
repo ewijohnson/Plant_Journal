@@ -24,7 +24,7 @@ from .models import (
 )
 
 
-class LightList(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class LightList(LoginRequiredMixin, PermissionRequiredMixin, PageLinksMixin, ListView):
     model = Light
     permission_required = 'plantjournal.view_light'
 

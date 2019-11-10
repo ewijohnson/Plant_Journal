@@ -44,7 +44,7 @@ ROOT_URLCONF = 'johnson_eric_final_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'plantjournal/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'plantjournal/../../plantjournal/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'johnson_eric_final_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, '../db.sqlite3'),
     }
 }
 
@@ -110,7 +110,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
 
 LOGIN_REDIRECT_URL = 'about_urlpattern'
 
