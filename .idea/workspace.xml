@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/development.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/johnson_eric_final_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/johnson_eric_final_project.iml" afterDir="false" />
+    <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="preparing for Deployment part 1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plantjournal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="1254">
+              <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -115,7 +109,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1851" />
+    <option name="x" value="1849" />
     <option name="y" value="63" />
     <option name="width" value="1989" />
     <option name="height" value="2016" />
@@ -140,6 +134,11 @@
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -154,7 +153,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/johnson_eric_final_project/settings/production.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -262,7 +261,7 @@
       <workItem from="1557718004471" duration="96000" />
       <workItem from="1558906630663" duration="135000" />
       <workItem from="1561848328703" duration="1098000" />
-      <workItem from="1573339061642" duration="5991000" />
+      <workItem from="1573339061642" duration="6943000" />
     </task>
     <task id="LOCAL-00001" summary="README added">
       <created>1573339383524</created>
@@ -299,11 +298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573340759277</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="preparing for Deployment part 1">
+      <created>1573345536734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573345536734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74387000" />
+    <option name="totallyTimeSpent" value="75339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="823" y="28" width="884" height="896" extended-state="0" />
@@ -366,19 +372,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="README added" />
     <MESSAGE value="provided Guest access in README" />
-    <option name="LAST_COMMIT_MESSAGE" value="provided Guest access in README" />
+    <MESSAGE value="preparing for Deployment part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparing for Deployment part 1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/johnson_eric_final_project$generate_plant_test_data.coverage" NAME="generate_plant_test_data Coverage Results" MODIFIED="1556756622053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../final_project_create_test_data" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/light_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="34" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/soil_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -708,10 +708,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/css/autocomplete.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="1254">
+          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
