@@ -1,132 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="">
+    <list default="true" id="2f2ffb62-ff8f-4281-967d-43f4f13cf935" name="Default Changelist" comment="changed static folder location again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/autocomplete.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/changelists.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/forms.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/responsive_rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/vendor/select2/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/vendor/select2/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/css/widgets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/fonts/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/fonts/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/calendar-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-addlink.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-alert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-calendar.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-changelink.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-clock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-deletelink.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-no.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-unknown-alt.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-unknown.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-viewlink.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/icon-yes.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/inline-delete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/search.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/selector-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/sorting-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/tooltag-add.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/img/tooltag-arrowright.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/SelectBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/SelectFilter2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/actions.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/autocomplete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/cancel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/change_form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/collapse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/collapse.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/inlines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/inlines.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/jquery.init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/popup_response.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/prepopulate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/prepopulate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/prepopulate_init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/timeparse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/urlify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/select2.full.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/plantjournal/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/plantjournal/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/plantjournal/skeleton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/johnson_eric_final_project/static/plantjournal/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,13 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings/base.py">
+        <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -177,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/plant_refuse_delete.html" />
         <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_confirm_delete.html" />
         <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_form.html" />
         <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/growthinstance_form_update.html" />
@@ -228,12 +101,13 @@
         <option value="$PROJECT_DIR$/plantjournal/views.py" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/requirements/base.txt" />
         <option value="$PROJECT_DIR$/johnson_eric_final_project/settings/base.py" />
+        <option value="$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1849" />
-    <option name="y" value="63" />
+    <option name="x" value="1804" />
+    <option name="y" value="96" />
     <option name="width" value="1989" />
     <option name="height" value="2016" />
   </component>
@@ -261,8 +135,20 @@
             <path>
               <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="johnson_eric_final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="johnson_eric_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="plantjournal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,7 +163,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/johnson_eric_final_project/settings/production.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,7 +272,7 @@
       <workItem from="1558906630663" duration="135000" />
       <workItem from="1561848328703" duration="1098000" />
       <workItem from="1573339061642" duration="6943000" />
-      <workItem from="1573346353762" duration="2565000" />
+      <workItem from="1573346353762" duration="3976000" />
     </task>
     <task id="LOCAL-00001" summary="README added">
       <created>1573339383524</created>
@@ -444,11 +330,25 @@
       <option name="project" value="LOCAL" />
       <updated>1573346838560</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed static folder location">
+      <created>1573349948744</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573349948744</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed static folder location again">
+      <created>1573350849799</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573350849799</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77904000" />
+    <option name="totallyTimeSpent" value="79315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,9 +360,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="822" y="28" width="884" height="896" extended-state="0" />
+    <frame x="802" y="43" width="884" height="896" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27294686" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27294686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -478,7 +379,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3288948" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32985657" />
-      <window_info active="true" anchor="bottom" id="manage.py@johnson_eric_final_project" order="13" visible="true" weight="0.31160367" />
+      <window_info anchor="bottom" id="manage.py@johnson_eric_final_project" order="13" visible="true" weight="0.31160367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -523,7 +424,9 @@
     <MESSAGE value="preparing for Deployment part 1" />
     <MESSAGE value="fixing static files" />
     <MESSAGE value="added base requirement file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added base requirement file" />
+    <MESSAGE value="changed static folder location" />
+    <MESSAGE value="changed static folder location again" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed static folder location again" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/johnson_eric_final_project$generate_plant_test_data.coverage" NAME="generate_plant_test_data Coverage Results" MODIFIED="1556756622053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../final_project_create_test_data" />
@@ -794,9 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/login.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -861,11 +761,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/johnson_eric_final_project/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="178">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plantjournal/templates/plantjournal/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
         </state>
       </provider>
     </entry>
