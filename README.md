@@ -10,7 +10,7 @@ plants owned; light, water, and soil conditions; and other detailed information.
 As this application was written to require log in functionality, anyone can view 
 it using the Guest log in that I have provided. 
 
-Web Address: https://ewijohnson.pythonanywhere.com/about/
+Web Address: https://ewijohnson.pythonanywhere.com/about/  
 User Name: guest  
 Password: plant123
 
